@@ -1,0 +1,45 @@
+body {
+    margin: 0 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 249px) {
+    svg {
+        margin-top: 10px;
+    }
+}
+
+.email {
+    background: url('./assets/contact/email.svg') no-repeat;
+}
+.github {
+    background: url('./assets/contact/github.svg') no-repeat;
+}
+.linkedin {
+    background: url('./assets/contact/linkedin.svg') no-repeat;
+}
+
+svg {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+}
+
+svg:hover {
+    animation-name: wiggle;
+    animation-duration: 1s;
+    animation-iteration-count: 100;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(5deg);}
+    25% {transform: rotate(-5deg);}
+    50% {transform: rotate(5deg);}
+    75% {transform: rotate(-5deg);}
+    100% {transform: rotate(5deg);}
+}
