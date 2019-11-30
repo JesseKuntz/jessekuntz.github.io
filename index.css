@@ -1,5 +1,12 @@
 body {
     margin: 0 20px;
+    font-family: proxima-soft, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+}
+
+.text {
+    font-size: 18px
 }
 
 .contact-container {
