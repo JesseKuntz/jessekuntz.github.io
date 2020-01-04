@@ -4,13 +4,13 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Jesse Kuntz</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel='stylesheet' href='index.css'>
 </head>
 <body>
     <h1>Jesse Kuntz</h1>
 
     <h2>About</h2>
-    <ul class=text>
+    <ul class='text'>
         <li>Currently, I am a Software Development Engineer working at Groupon.</li>
         <li>I graduated from Calvin University in 2019 with a BCS and minor in mathematics.</li>
         <li>Some of my personal interests include web development, Raspberry Pi's, and mixing music with software development.</li>
@@ -30,5 +30,58 @@
             <svg class='linkedin'></svg>
         </a>
     </div>
+
+    <h2>Projects</h2>
+    <!-- Python Piano -->
+    <button class='accordion'>
+        <span class='text'>Python Piano</span>
+        <div class='accordion-symbol'>+</div>
+    </button>
+    <div class='panel'>
+        <p class='text'>
+            A two-octave digital piano, written in Python 3, that contains the following features:
+        </p>
+
+        <ul class='text'>
+            <li>Play using a mouse</li>
+            <li>Play using the keyboard</li>
+            <li>Recording</li>
+            <li>Playback</li>
+            <li>Preset songs</li>
+        </ul>
+
+        <p class='text'>
+            More details are in the <a href="https://github.com/JesseKuntz/my-piano">Github repository</a>.
+        </p>
+    </div>
+
+    <!-- MIDI Controller -->
+    <button class='accordion'>
+        <span class='text'>Midi Controller</span>
+        <div class='accordion-symbol'>+</div>
+    </button>
+    <div class='panel'>
+        <p class='text'>
+            A MIDI Controller that is modeled after the one built in <a href="https://ask.audio/articles/how-to-build-a-simple-diy-usb-midi-controller-using-teensy">this article</a>.
+        </p>
+
+        <p class='text'>Components:</p>
+        <ul class='text'>
+            <li>Teensy LC</li>
+            <li>Solderless Breadboard</li>
+            <li>Jumper Wires</li>
+            <li>Arcade Buttons</li>
+            <li>Toggle Switch</li>
+            <li>Micro USB Cable</li>
+            <li>Cardbord Enclosure</li>
+        </ul>
+
+        <p class='text'>
+            Using Reaper and various VSTs, this MIDI controller has the ability to create endless music. I mainly use it to make drum tracks, with <a href="https://www.kvraudio.com/product/sl-drums-3-by-electronik-sound-lab">SL Drums 3</a> from Beatmaker. There is also a toggle switch that can be used to catch incoming CC signals. The following code can be programmed into the Teensy in order to make it recognizable as a MIDI controller.
+        </p>
+
+        <p class='text'><a href="assets/projects/midi-code.html ">MIDI Code</a></p>
+    </div>
 </body>
+<script src="index.js"></script>
 </html>
