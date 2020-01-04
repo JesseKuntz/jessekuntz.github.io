@@ -10,5 +10,11 @@ accordions.forEach(accordion => {
         } else {
             panel.style.display = 'block';
         }
+
+        window.scrollTo({
+            'behavior': 'smooth',
+            'left': 0,
+            'top': accordion.offsetTop
+        });
     });
 });
