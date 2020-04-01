@@ -1,104 +1,133 @@
 <!DOCTYPE html>
 <html lang='en'>
-<head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Jesse Kuntz</title>
-    <link rel='stylesheet' href='index.css'>
-</head>
-<body>
-    <h1>Jesse Kuntz</h1>
 
-    <h2>About</h2>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Jesse Kuntz</title>
+  <link rel='stylesheet' href='index.css'>
+</head>
+
+<body>
+  <h1>Jesse Kuntz</h1>
+
+  <h2>About</h2>
+  <ul class='text'>
+    <li>Currently, I am a Software Development Engineer working at Groupon.</li>
+    <li>I graduated from Calvin University in 2019 with a bachelor's in computer science and minor in mathematics.</li>
+    <li>Some of my personal interests include web development, Raspberry Pi's, and mixing music with software
+      development.</li>
+  </ul>
+
+  <h2>Projects</h2>
+
+  <!-- Python Piano -->
+  <button class='accordion'>
+    <span class='text'>Python Piano</span>
+    <div class='accordion-symbol'>+</div>
+  </button>
+  <div class='panel'>
+    <p class='text'>
+      A two-octave digital piano, written in Python 3, that contains the following features:
+    </p>
+
     <ul class='text'>
-        <li>Currently, I am a Software Development Engineer working at Groupon.</li>
-        <li>I graduated from Calvin University in 2019 with a BCS and minor in mathematics.</li>
-        <li>Some of my personal interests include web development, Raspberry Pi's, and mixing music with software development.</li>
+      <li>Play using a mouse</li>
+      <li>Play using the keyboard</li>
+      <li>Recording</li>
+      <li>Playback</li>
+      <li>Preset songs</li>
     </ul>
 
-    <h2>Contact</h2>
-    <div class='contact-container'>
-        <a href='mailto:jessekuntz96@gmail.com'>
-            <svg class='email'></svg>
-        </a>
+    <p class='text'>
+      More details are in the <a href="https://github.com/JesseKuntz/my-piano">Github repository</a>.
+    </p>
+  </div>
 
-        <a href='https://github.com/JesseKuntz'>
-            <svg class='github'></svg>
-        </a>
+  <!-- JS Piano -->
+  <button class='accordion'>
+    <span class='text'>JavaScript Piano</span>
+    <div class='accordion-symbol'>+</div>
+  </button>
+  <div class='panel'>
+    <p class='text'>
+      A two-octave digital piano, written in JavaScript! Hold shift to play the upper octaves (sorry, users on touch!).
+    </p>
 
-        <a href='https://www.linkedin.com/in/jesse-kuntz-162198139'>
-            <svg class='linkedin'></svg>
-        </a>
-    </div>
+    <p class='text'>
+      Click <a href="assets/projects/js-piano/js-piano.html" target='_blank'>here</a> to open a new tab and play it. The
+      <a href="https://github.com/JesseKuntz/my-piano">Github repository</a> for the Python version has some
+      instructions on how to play!
+    </p>
+  </div>
 
-    <h2>Projects</h2>
-    <!-- Python Piano -->
-    <button class='accordion'>
-        <span class='text'>Python Piano</span>
-        <div class='accordion-symbol'>+</div>
-    </button>
-    <div class='panel'>
-        <p class='text'>
-            A two-octave digital piano, written in Python 3, that contains the following features:
-        </p>
+  <!-- MIDI Controller -->
+  <button class='accordion'>
+    <span class='text'>Midi Controller</span>
+    <div class='accordion-symbol'>+</div>
+  </button>
+  <div class='panel'>
+    <p class='text'>
+      A MIDI Controller that is modeled after the one built in <a
+        href="https://ask.audio/articles/how-to-build-a-simple-diy-usb-midi-controller-using-teensy">this article</a>.
+    </p>
 
-        <ul class='text'>
-            <li>Play using a mouse</li>
-            <li>Play using the keyboard</li>
-            <li>Recording</li>
-            <li>Playback</li>
-            <li>Preset songs</li>
-        </ul>
+    <p class='text'>Components:</p>
+    <ul class='text'>
+      <li>Teensy LC</li>
+      <li>Solderless Breadboard</li>
+      <li>Jumper Wires</li>
+      <li>Arcade Buttons</li>
+      <li>Toggle Switch</li>
+      <li>Micro USB Cable</li>
+      <li>Cardbord Enclosure</li>
+    </ul>
 
-        <p class='text'>
-            More details are in the <a href="https://github.com/JesseKuntz/my-piano">Github repository</a>.
-        </p>
-    </div>
+    <p class='text'>
+      Using Reaper and various VSTs, this MIDI controller has the ability to create endless music. I mainly use it to
+      make drum tracks, with <a href="https://www.kvraudio.com/product/sl-drums-3-by-electronik-sound-lab">SL Drums
+        3</a> from Beatmaker. There is also a toggle switch that can be used to catch incoming CC signals. The following
+      code can be programmed into the Teensy in order to make it recognizable as a MIDI controller.
+    </p>
 
-    <!-- MIDI Controller -->
-    <button class='accordion'>
-        <span class='text'>Midi Controller</span>
-        <div class='accordion-symbol'>+</div>
-    </button>
-    <div class='panel'>
-        <p class='text'>
-            A MIDI Controller that is modeled after the one built in <a href="https://ask.audio/articles/how-to-build-a-simple-diy-usb-midi-controller-using-teensy">this article</a>.
-        </p>
+    <p class='text'><a href="assets/projects/midi-code.html ">MIDI Code</a></p>
+  </div>
 
-        <p class='text'>Components:</p>
-        <ul class='text'>
-            <li>Teensy LC</li>
-            <li>Solderless Breadboard</li>
-            <li>Jumper Wires</li>
-            <li>Arcade Buttons</li>
-            <li>Toggle Switch</li>
-            <li>Micro USB Cable</li>
-            <li>Cardbord Enclosure</li>
-        </ul>
+  <!-- Pi Retrobox -->
+  <button class='accordion'>
+    <span class='text'>Pi Retrobox </span>
+    <div class='accordion-symbol'>+</div>
+  </button>
+  <div class='panel'>
+    <p class='text'>
+      This is my version of the "Pi Retrobox" which is essentially an all-in-one
+      retro gaming console and controller. HUGE shoutout to howchoo for putting together
+      the <a
+        href="https://howchoo.com/g/zjm4zwzjzgi/pi-retrobox-build-your-own-diy-raspberry-pi-arcade-joystick">guide</a>
+      that helped me build this! This was 100% their idea, and I don't take credit for any of it.
+      I'm just happy that I was able to build my own! The build is pretty much the same as
+      howchoo does it, save for the printed image. If you want to learn anything else about it,
+      click on that guide!
+    </p>
+  </div>
 
-        <p class='text'>
-            Using Reaper and various VSTs, this MIDI controller has the ability to create endless music. I mainly use it to make drum tracks, with <a href="https://www.kvraudio.com/product/sl-drums-3-by-electronik-sound-lab">SL Drums 3</a> from Beatmaker. There is also a toggle switch that can be used to catch incoming CC signals. The following code can be programmed into the Teensy in order to make it recognizable as a MIDI controller.
-        </p>
 
-        <p class='text'><a href="assets/projects/midi-code.html ">MIDI Code</a></p>
-    </div>
+  <h2>Contact</h2>
+  <div class='contact-container'>
+    <a href='mailto:jessekuntz96@gmail.com'>
+      <svg class='email'></svg>
+    </a>
 
-    <!-- Pi Retrobox -->
-    <button class='accordion'>
-        <span class='text'>Pi Retrobox </span>
-        <div class='accordion-symbol'>+</div>
-    </button>
-    <div class='panel'>
-        <p class='text'>
-            This is my version of the "Pi Retrobox" which is essentially an all-in-one
-            retro gaming console and controller. HUGE shoutout to howchoo for putting together
-            the <a href="https://howchoo.com/g/zjm4zwzjzgi/pi-retrobox-build-your-own-diy-raspberry-pi-arcade-joystick">guide</a>
-            that helped me build this! This was 100% their idea, and I don't take credit for any of it.
-            I'm just happy that I was able to build my own! The build is pretty much the same as
-            howchoo does it, save for the printed image. If you want to learn anything else about it,
-            click on that guide!
-        </p>
-    </div>
+    <a href='https://github.com/JesseKuntz'>
+      <svg class='github'></svg>
+    </a>
+
+    <a href='https://www.linkedin.com/in/jesse-kuntz-162198139'>
+      <svg class='linkedin'></svg>
+    </a>
+  </div>
+
 </body>
 <script src="index.js"></script>
+
 </html>
