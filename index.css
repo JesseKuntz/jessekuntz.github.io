@@ -95,3 +95,9 @@ svg:hover {
   border: 1px solid black;
   border-radius: 8px;
 }
+
+.piano {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 18px;
+}
