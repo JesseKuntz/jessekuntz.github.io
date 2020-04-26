@@ -13,9 +13,9 @@
 
   <h2>About</h2>
   <ul class='text'>
-    <li>Currently, I am a Software Development Engineer working at Groupon.</li>
+    <li>Currently, I am a Software Development Engineer at Groupon.</li>
     <li>I graduated from Calvin University in 2019 with a bachelor's in computer science and minor in mathematics.</li>
-    <li>Some of my personal interests include web development, Raspberry Pi's, and mixing music with software
+    <li>Some of my interests include web development, Raspberry Pi's, and mixing music with software
       development.</li>
   </ul>
 
@@ -27,7 +27,11 @@
     <div class='accordion-symbol'>+</div>
   </button>
   <div class='panel'>
-    <img class='piano' src='assets/projects/python-piano.png' alt='Python Piano'>
+    <picture>
+      <source media='(max-width: 419px)' srcset="assets/projects/piano-400w.png">
+      <source media='(min-width: 420px)' srcset="assets/projects/piano-600w.png">
+      <img class='piano' src="assets/projects/piano-600w.png" alt="Python Piano">
+    </picture>
 
     <p class='text'>
       A two-octave digital piano, written in Python 3, that contains the following features:

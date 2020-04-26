@@ -77,7 +77,7 @@ svg:hover {
   font-size: 20px;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 420px) {
   .accordion:hover {
     background-color: rgb(0, 204, 255);
   }
@@ -98,6 +98,6 @@ svg:hover {
 
 .piano {
   width: 100%;
-  max-width: 550px;
+  max-width: 600px;
   margin-top: 18px;
 }
