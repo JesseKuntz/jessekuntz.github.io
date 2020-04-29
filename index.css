@@ -34,20 +34,11 @@ body {
   }
 }
 
-.email {
-  background: url('./assets/contact/email.svg') no-repeat;
-}
-.github {
-  background: url('./assets/contact/github.svg') no-repeat;
-}
-.linkedin {
-  background: url('./assets/contact/linkedin.svg') no-repeat;
-}
-
 svg {
   height: 50px;
   width: 50px;
   margin-right: 20px;
+  fill: var(--light-color);
 }
 
 svg:hover {
