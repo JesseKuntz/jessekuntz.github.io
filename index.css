@@ -1,6 +1,8 @@
 :root {
   --dark-color: white;
   --light-color: black;
+  --dark-mode-cat: url(./assets/dark-mode/black-cat.svg);
+  --light-mode-cat: url(./assets/dark-mode/white-cat.svg);
 }
 
 body {
@@ -10,6 +12,22 @@ body {
   font-weight: 200;
   background-color: var(--dark-color);
   color: var(--light-color);
+}
+
+.row {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+}
+
+.dark-mode-cat {
+  width: 37px;
+  height: 37px;
+  background: var(--dark-mode-cat);
 }
 
 @media only screen and (min-width: 900px) {
@@ -34,14 +52,14 @@ body {
   }
 }
 
-svg {
+a svg {
   height: 50px;
   width: 50px;
   margin-right: 20px;
   fill: var(--light-color);
 }
 
-svg:hover {
+a svg:hover {
   animation-name: wiggle;
   animation-duration: 1s;
   animation-iteration-count: 100;
