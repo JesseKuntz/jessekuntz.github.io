@@ -52,6 +52,10 @@ h1 {
   }
 }
 
+svg {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 a svg {
   height: 50px;
   width: 50px;
