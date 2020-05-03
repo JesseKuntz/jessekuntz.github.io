@@ -52,7 +52,7 @@ h1 {
   }
 }
 
-svg {
+.dark-mode-cat, .contact-icon {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
