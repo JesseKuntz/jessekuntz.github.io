@@ -3,6 +3,10 @@
   --light-color: black;
   --dark-mode-cat: url(./assets/dark-mode/black-cat.svg);
   --light-mode-cat: url(./assets/dark-mode/white-cat.svg);
+  --link-light-color: blue;
+  --link-visited-light-color: purple;
+  --link-dark-color: orange;
+  --link-visited-dark-color: green;
 }
 
 body {
@@ -12,6 +16,15 @@ body {
   font-weight: 200;
   background-color: var(--dark-color);
   color: var(--light-color);
+  max-width: 1008px;
+}
+
+a {
+  color: var(--link-light-color);
+}
+
+a:visited {
+  color: var(--link-visited-light-color);
 }
 
 .row {
@@ -27,14 +40,7 @@ h1 {
 .dark-mode-cat {
   width: 37px;
   height: 37px;
-  background: var(--dark-mode-cat);
-}
-
-@media only screen and (min-width: 900px) {
-  body {
-    padding-left: 200px;
-    padding-right: 200px
-  }
+  background: var(--dark-mode-cat) no-repeat;
 }
 
 .text {
@@ -52,7 +58,7 @@ h1 {
   }
 }
 
-.dark-mode-cat, .contact-icon {
+.dark-mode-cat, .contact-icon, .card {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -82,35 +88,52 @@ li {
   margin-top: 8px;
 }
 
-.accordion {
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: 1px solid var(--light-color);
-  border-radius: 8px;
-  outline: none;
-  transition: 0.2s;
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title-wrapper {
+  border-bottom: 2px solid var(--light-color);
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
+  margin: 2px 8px 0;
+  height: 30px;
+}
+
+.card {
+  cursor: pointer;
+  border: 4px solid var(--light-color);
+  border-radius: 8px;
+  outline: none;
   background-color: var(--dark-color);
   color: var(--light-color);
+
+  margin: 12px 12px 0 0;
+  width: 240px;
+  height: 240px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  padding: 0;
+  overflow: hidden;
+
+  font-family: proxima-soft, sans-serif;
+  font-weight: 200;
 }
 
-.accordion-symbol {
-  font-size: 20px;
-}
-
-@media only screen and (min-width: 420px) {
-  .accordion:hover {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-  }
-}
-
-.active {
-  background-color: var(--light-color);
-  color: var(--dark-color);
+.content {
+  text-align: left;
+  font-size: 16px;
+  margin: 0 8px;
+  line-height: 1.4;
 }
 
 .panel {
@@ -127,4 +150,64 @@ li {
   margin-top: 18px;
   border: 3px solid black;
   border-radius: 8px;
+}
+
+/* Desktop ONLY Styles */
+@media only screen and (min-width: 421px) {
+  body {
+    padding: 0 100px 100px;
+    margin: auto;
+  }
+
+  .card:hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+  }
+
+  .card:hover a {
+    color: var(--link-dark-color);
+  }
+
+  .card:hover a:visited {
+    color: var(--link-visited-dark-color);
+  }
+
+  .card:hover .title-wrapper {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+  }
+
+  .active {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+  }
+
+  .active a {
+    color: var(--link-dark-color);
+  }
+
+  .active a:visited {
+    color: var(--link-visited-dark-color);
+  }
+
+  .active .title-wrapper {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+  }
+}
+
+/* Touch ONLY Styles */
+@media only screen and (max-width: 420px) {
+  .projects {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  .card {
+    min-width: 85%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    margin-top: 0px;
+  }
 }

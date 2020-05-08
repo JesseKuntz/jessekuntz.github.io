@@ -29,190 +29,237 @@
   </ul>
 
   <h2>Projects</h2>
-  <!-- Model Creator -->
-  <button class='accordion'>
-    <span class='text'>Model Creator</span>
-    <div class='accordion-symbol'>+</div>
-  </button>
-  <div class='panel'>
-    <picture>
-      <source media='(max-width: 419px)' srcset="assets/projects/web-400w.png">
-      <source media='(min-width: 420px)' srcset="assets/projects/web-600w.png">
-      <img class='project-image' src="assets/projects/web-600w.png" alt="Web Component" loading='lazy'>
-    </picture>
+  <div class='projects'>
+    <!-- Model Creator -->
+    <button class='card'>
+      <div class='title-wrapper'>
+        <div class='card-title'>
+          <span>Model Creator</span>
+          <span>📈</span>
+        </div>
+      </div>
+      <div class='content'>
+        <p>
+          A system consisting of an app on a mobile device + a web app for mapping out the coordinates of a physical
+          object
+          and converting them to a Blender-compatible file for editing.
+        </p>
 
-    <p class='text'>
-      A system consisting of an app on a mobile device + a web app for mapping out the coordinates of a physical object
-      and converting them to a Blender-compatible file for editing.
-    </p>
+        <p>
+          Source code (and much more information) in the Github repositories:
+          <ul>
+            <li><a href="https://github.com/JesseKuntz/model-creator-web" target='_blank'>Web Component</a></li>
+            <li><a href="https://github.com/JesseKuntz/model-creator-app" target='_blank'>App Component</a></li>
+          </ul>
+        </p>
+      </div>
+    </button>
+    <div class='panel'>
+      <picture>
+        <source media='(max-width: 419px)' srcset="assets/projects/web-400w.png">
+        <source media='(min-width: 420px)' srcset="assets/projects/web-600w.png">
+        <img class='project-image' src="assets/projects/web-600w.png" alt="Web Component" loading='lazy'>
+      </picture>
+    </div>
 
-    <p class='text'>
-      Source code (and much more information) in the Github repositories:
-      <ul>
-        <li><a href="https://github.com/JesseKuntz/model-creator-web" target='_blank'>Web Component</a></li>
-        <li><a href="https://github.com/JesseKuntz/model-creator-app" target='_blank'>App Component</a></li>
-      </ul>
-    </p>
-  </div>
+    <!-- Chess -->
+    <button class='card'>
+      <div class='title-wrapper'>
+        <div class='card-title'>
+          <span>Chess</span>
+          <span>♟</span>
+        </div>
+      </div>
 
-  <!-- Chess -->
-  <button class='accordion'>
-    <span class='text'>Chess</span>
-    <div class='accordion-symbol'>+</div>
-  </button>
-  <div class='panel'>
-    <picture>
-      <source media='(max-width: 419px)' srcset="assets/projects/chess-400w.png">
-      <source media='(min-width: 420px)' srcset="assets/projects/chess-600w.png">
-      <img class='project-image' src="assets/projects/chess-600w.png" alt="Chess Board" loading='lazy'>
-    </picture>
+      <div class='content'>
+        <p>
+          A game of chess, powered by three.js. Textures and animations done in Blender.
+        </p>
 
-    <p class='text'>
-      A game of chess, powered by three.js. Textures and animations done in Blender.
-    </p>
+        <p>
+          You can play <a href="https://three-chess.herokuapp.com/" target='_blank'>here</a>! (Note: it will crash on
+          touch
+          (non-compatible
+          engine), and will take a long time to load on desktop - please be patient 😁)
+        </p>
 
-    <p class='text'>
-      You can play <a href="https://three-chess.herokuapp.com/" target='_blank'>here</a>! (Note: it will crash on touch
-      (non-compatible
-      engine), and will take a long time to load on desktop - please be patient 😁)
-    </p>
+        <p>
+          Source code in the <a href="https://github.com/JesseKuntz/three-chess" target='_blank'>Github repository</a>.
+        </p>
+      </div>
+    </button>
+    <div class='panel'>
+      <picture>
+        <source media='(max-width: 419px)' srcset="assets/projects/chess-400w.png">
+        <source media='(min-width: 420px)' srcset="assets/projects/chess-600w.png">
+        <img class='project-image' src="assets/projects/chess-600w.png" alt="Chess Board" loading='lazy'>
+      </picture>
+    </div>
 
-    <p class='text'>
-      Source code in the <a href="https://github.com/JesseKuntz/three-chess" target='_blank'>Github repository</a>.
-    </p>
-  </div>
+    <!-- Python Piano -->
+    <button class='card'>
+      <div class='title-wrapper'>
+        <div class='card-title'>
+          <span>Python Piano</span>
+          <span>🎹</span>
+        </div>
+      </div>
 
-  <!-- Python Piano -->
-  <button class='accordion'>
-    <span class='text'>Python Piano</span>
-    <div class='accordion-symbol'>+</div>
-  </button>
-  <div class='panel'>
-    <picture>
-      <source media='(max-width: 419px)' srcset="assets/projects/piano-400w.png">
-      <source media='(min-width: 420px)' srcset="assets/projects/piano-600w.png">
-      <img class='project-image' src="assets/projects/piano-600w.png" alt="Python Piano" loading='lazy'>
-    </picture>
+      <div class='content'>
+        <p>
+          A two-octave digital piano, written in Python 3, that contains the following features:
+        </p>
 
-    <p class='text'>
-      A two-octave digital piano, written in Python 3, that contains the following features:
-    </p>
+        <ul>
+          <li>Play using a mouse</li>
+          <li>Play using the keyboard</li>
+          <li>Recording</li>
+          <li>Playback</li>
+          <li>Preset songs</li>
+        </ul>
 
-    <ul class='text'>
-      <li>Play using a mouse</li>
-      <li>Play using the keyboard</li>
-      <li>Recording</li>
-      <li>Playback</li>
-      <li>Preset songs</li>
-    </ul>
+        <p>
+          More details are in the <a href="https://github.com/JesseKuntz/my-piano" target='_blank'>Github repository</a>.
+        </p>
+      </div>
+    </button>
+    <div class='panel'>
+      <picture>
+        <source media='(max-width: 419px)' srcset="assets/projects/piano-400w.png">
+        <source media='(min-width: 420px)' srcset="assets/projects/piano-600w.png">
+        <img class='project-image' src="assets/projects/piano-600w.png" alt="Python Piano" loading='lazy'>
+      </picture>
+    </div>
 
-    <p class='text'>
-      More details are in the <a href="https://github.com/JesseKuntz/my-piano" target='_blank'>Github repository</a>.
-    </p>
-  </div>
+    <!-- JS Piano -->
+    <button class='card'>
+      <div class='title-wrapper'>
+        <div class='card-title'>
+          <span>JavaScript Piano</span>
+          <span>🎹</span>
+        </div>
+      </div>
 
-  <!-- JS Piano -->
-  <button class='accordion'>
-    <span class='text'>JavaScript Piano</span>
-    <div class='accordion-symbol'>+</div>
-  </button>
-  <div class='panel'>
-    <p class='text'>
-      A two-octave digital piano, written in JavaScript! Hold shift to play the upper octaves (sorry, users on touch!).
-    </p>
+      <div class='content'>
+        <p>
+          A two-octave digital piano, written in JavaScript! Hold shift to play the upper octaves (sorry, users on
+          touch!).
+        </p>
 
-    <p class='text'>
-      Click <a href="assets/projects/js-piano/js-piano.html" target='_blank'>here</a> to open a new tab and play it. The
-      <a href="https://github.com/JesseKuntz/my-piano" target='_blank'>Github repository</a> for the Python version has
-      some instructions on how to play!
-    </p>
-  </div>
+        <p>
+          Click <a href="assets/projects/js-piano/js-piano.html" target='_blank'>here</a> to open a new tab and play it.
+          The
+          <a href="https://github.com/JesseKuntz/my-piano" target='_blank'>Github repository</a> for the Python version
+          has
+          some instructions on how to play!
+        </p>
+      </div>
+    </button>
 
-  <!-- Flower -->
-  <button class='accordion'>
-    <span class='text'>Flower</span>
-    <div class='accordion-symbol'>+</div>
-  </button>
-  <div class='panel'>
-    <p class='text'>
-      An alien flower, built with three.js 👽🌷
-    </p>
+    <!-- Flower -->
+    <button class='card'>
+      <div class='title-wrapper'>
+        <div class='card-title'>
+          <span>Flower</span>
+          <span>🌸</span>
+        </div>
+      </div>
 
-    <p class='text'>
-      Click <a href="https://three-flower.herokuapp.com" target='_blank'>here</a> to see it. You can drag the
-      environment to see more of the skybox!
-    </p>
+      <div class='content'>
+        <p>
+          An alien flower, built with three.js 👽🌷
+        </p>
 
-    <p class='text'>
-      Source code in the <a href="https://github.com/JesseKuntz/three-flower" target='_blank'>Github repository</a>.
-    </p>
-  </div>
+        <p>
+          Click <a href="https://three-flower.herokuapp.com" target='_blank'>here</a> to see it. You can drag the
+          environment to see more of the skybox!
+        </p>
 
-  <!-- The Giant Pixel -->
-  <button class='accordion'>
-    <span class='text'>The Giant Pixel</span>
-    <div class='accordion-symbol'>+</div>
-  </button>
-  <div class='panel'>
-    <p class='text'>
+        <p>
+          Source code in the <a href="https://github.com/JesseKuntz/three-flower" target='_blank'>Github repository</a>.
+        </p>
+      </div>
+    </button>
 
-    </p>
+    <!-- The Giant Pixel -->
+    <button class='card'>
+      <div class='title-wrapper'>
+        <div class='card-title'>
+          <span>The Giant Pixel</span>
+          <span>💡</span>
+        </div>
+      </div>
 
-    <p class='text'>
-      Source code in the <a href="https://github.com/JesseKuntz/the-giant-pixel" target='_blank'>Github repository</a>.
-    </p>
-  </div>
+      <div class='content'>
+        <p>
+          Source code in the <a href="https://github.com/JesseKuntz/the-giant-pixel" target='_blank'>Github
+            repository</a>.
+        </p>
+      </div>
+    </button>
 
-  <!-- MIDI Controller -->
-  <button class='accordion'>
-    <span class='text'>Midi Controller</span>
-    <div class='accordion-symbol'>+</div>
-  </button>
-  <div class='panel'>
-    <p class='text'>
-      A MIDI Controller that is modeled after the one built in <a
-        href="https://ask.audio/articles/how-to-build-a-simple-diy-usb-midi-controller-using-teensy"
-        target='_blank'>this article</a>.
-    </p>
+    <!-- MIDI Controller -->
+    <button class='card'>
+      <div class='title-wrapper'>
+        <div class='card-title'>
+          <span>Midi Controller</span>
+          <span>🎵</span>
+        </div>
+      </div>
 
-    <p class='text'>Components:</p>
-    <ul class='text'>
-      <li>Teensy LC</li>
-      <li>Solderless Breadboard</li>
-      <li>Jumper Wires</li>
-      <li>Arcade Buttons</li>
-      <li>Toggle Switch</li>
-      <li>Micro USB Cable</li>
-      <li>Cardbord Enclosure</li>
-    </ul>
+      <div class='content'>
+        <p>
+          A MIDI Controller that is modeled after the one built in <a
+            href="https://ask.audio/articles/how-to-build-a-simple-diy-usb-midi-controller-using-teensy"
+            target='_blank'>this article</a>.
+        </p>
 
-    <p class='text'>
-      Using Reaper and various VSTs, this MIDI controller has the ability to create endless music. I mainly use it to
-      make drum tracks, with <a href="https://www.kvraudio.com/product/sl-drums-3-by-electronik-sound-lab"
-        target='_blank'>SL Drums
-        3</a> from Beatmaker. There is also a toggle switch that can be used to catch incoming CC signals. The following
-      code can be programmed into the Teensy in order to make it recognizable as a MIDI controller.
-    </p>
+        <p>Components:</p>
+        <ul>
+          <li>Teensy LC</li>
+          <li>Solderless Breadboard</li>
+          <li>Jumper Wires</li>
+          <li>Arcade Buttons</li>
+          <li>Toggle Switch</li>
+          <li>Micro USB Cable</li>
+          <li>Cardbord Enclosure</li>
+        </ul>
 
-    <p class='text'><a href="assets/projects/midi-code.html" target='_blank'>MIDI Code</a></p>
-  </div>
+        <p>
+          Using Reaper and various VSTs, this MIDI controller has the ability to create endless music. I mainly use it to
+          make drum tracks, with <a href="https://www.kvraudio.com/product/sl-drums-3-by-electronik-sound-lab"
+            target='_blank'>SL Drums
+            3</a> from Beatmaker. There is also a toggle switch that can be used to catch incoming CC signals. The
+          following
+          code can be programmed into the Teensy in order to make it recognizable as a MIDI controller.
+        </p>
 
-  <!-- Pi Retrobox -->
-  <button class='accordion'>
-    <span class='text'>Pi Retrobox </span>
-    <div class='accordion-symbol'>+</div>
-  </button>
-  <div class='panel'>
-    <p class='text'>
-      This is my version of the "Pi Retrobox" which is essentially an all-in-one
-      retro gaming console and controller. HUGE shoutout to howchoo for putting together
-      the <a href="https://howchoo.com/g/zjm4zwzjzgi/pi-retrobox-build-your-own-diy-raspberry-pi-arcade-joystick"
-        target='_blank'>guide</a>
-      that helped me build this! This was 100% their idea, and I don't take credit for any of it.
-      I'm just happy that I was able to build my own! The build is pretty much the same as
-      howchoo does it, save for the printed image. If you want to learn anything else about it,
-      click on that guide!
-    </p>
+        <p><a href="assets/projects/midi-code.html" target='_blank'>MIDI Code</a></p>
+      </div>
+    </button>
+
+    <!-- Pi Retrobox -->
+    <button class='card'>
+      <div class='title-wrapper'>
+        <div class='card-title'>
+          <span>Pi Retrobox</span>
+          <span>🕹</span>
+        </div>
+      </div>
+
+      <div class='content'>
+        <p>
+          This is my version of the "Pi Retrobox" which is essentially an all-in-one
+          retro gaming console and controller. HUGE shoutout to howchoo for putting together
+          the <a href="https://howchoo.com/g/zjm4zwzjzgi/pi-retrobox-build-your-own-diy-raspberry-pi-arcade-joystick"
+            target='_blank'>guide</a>
+          that helped me build this! This was 100% their idea, and I don't take credit for any of it.
+          I'm just happy that I was able to build my own! The build is pretty much the same as
+          howchoo does it, save for the printed image. If you want to learn anything else about it,
+          click on that guide!
+        </p>
+      </div>
+    </button>
   </div>
 
   <h2>Contact</h2>
