@@ -15,11 +15,14 @@ cards.forEach(card => {
     resetCards(card);
 
     this.classList.toggle('active');
+    const fade = card.querySelector('.fade');
 
     if (card.style.height === '100%') {
       card.style.height = '240px';
+      fade.style.display = 'block';
     } else {
       card.style.height = '100%';
+      fade.style.display = 'none';
     }
 
     window.scrollTo({
