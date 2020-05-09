@@ -7,6 +7,7 @@ function resetCards(currentCard) {
   otherCards.forEach(otherCard => {
     otherCard.classList.remove('active');
     otherCard.style.height = '240px';
+    otherCard.lastElementChild.style.display = 'block';
   });
 }
 
