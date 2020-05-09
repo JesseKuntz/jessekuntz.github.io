@@ -32,7 +32,14 @@ cards.forEach(card => {
   });
 });
 
+function meow() {
+  const audio = new Audio('assets/dark-mode/meow.mp3');
+  audio.play();
+}
+
 darkModeCat.addEventListener('click', () => {
+  meow();
+
   const root = document.documentElement;
   const rootStyles = getComputedStyle(root);
 
