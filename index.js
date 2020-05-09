@@ -33,8 +33,13 @@ cards.forEach(card => {
   });
 });
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 function meow() {
-  const audio = new Audio('assets/dark-mode/meow.mp3');
+  const random = getRandomInt(3);
+  const audio = new Audio(`assets/dark-mode/meow${random}.mp3`);
   audio.play();
 }
 
