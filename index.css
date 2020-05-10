@@ -112,6 +112,7 @@ li {
   height: 70px;
   background: linear-gradient(rgba(255,255,255,0), lightblue);
   top: 162px;
+  display: none;
 }
 
 .card {
