@@ -196,6 +196,10 @@ li {
     background-color: var(--dark-color);
     color: var(--light-color);
   }
+
+  .active .project-image {
+    border-color: var(--dark-color);
+  }
 }
 
 /* Touch ONLY Styles */
