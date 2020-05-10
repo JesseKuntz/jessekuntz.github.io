@@ -2,6 +2,10 @@ const cards = [...document.getElementsByClassName('card')];
 const panels = [...document.getElementsByClassName('panel')];
 const darkModeCat = document.querySelector('.dark-mode-cat');
 
+const root = document.documentElement;
+const rootStyles = getComputedStyle(root);
+const cardHeight = rootStyles.getPropertyValue('--card-height');
+
 function shouldHaveFade(card) {
   if (card.scrollHeight > card.offsetHeight) {
     return true;
@@ -16,7 +20,7 @@ function resetCards(currentCard) {
   })
   otherCards.forEach(otherCard => {
     otherCard.classList.remove('active');
-    otherCard.style.height = '240px';
+    otherCard.style.height = cardHeight;
     otherCard.lastElementChild.style.display = 'block';
   });
 }
@@ -40,7 +44,7 @@ cards.forEach(card => {
       const fade = card.querySelector('.fade');
 
       if (card.style.height === '100%') {
-        card.style.height = '240px';
+        card.style.height = cardHeight;
         fade.style.display = 'block';
       } else {
         card.style.height = '100%';
@@ -59,9 +63,6 @@ cards.forEach(card => {
 
 darkModeCat.addEventListener('click', () => {
   meow();
-
-  const root = document.documentElement;
-  const rootStyles = getComputedStyle(root);
 
   const darkColor = rootStyles.getPropertyValue('--dark-color');
   const lightColor = rootStyles.getPropertyValue('--light-color');
