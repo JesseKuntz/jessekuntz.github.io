@@ -93,6 +93,7 @@ li {
 .projects {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 10px;
 }
 
 .title-wrapper {
@@ -140,6 +141,7 @@ li {
   font-weight: 200;
 
   position: relative;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .content {
