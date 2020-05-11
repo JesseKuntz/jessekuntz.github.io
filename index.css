@@ -8,7 +8,7 @@
   --link-dark-color: orange;
   --link-visited-dark-color: green;
 
-  --card-height: 240px;
+  --card-height: 280px;
 }
 
 body {
@@ -114,7 +114,7 @@ li {
   width: 100%;
   height: 70px;
   background: linear-gradient(rgba(255,255,255,0), lightblue);
-  top: 162px;
+  top: 202px;
   display: none;
 }
 
@@ -127,7 +127,7 @@ li {
   color: var(--light-color);
 
   margin: 12px 12px 0 0;
-  width: 240px;
+  width: 280px;
   height: var(--card-height);
 
   display: flex;
@@ -146,7 +146,7 @@ li {
 
 .content {
   text-align: left;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0 8px;
   line-height: 1.4;
 }
