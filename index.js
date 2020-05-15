@@ -35,6 +35,16 @@ function meow() {
   audio.play();
 }
 
+function openProject() {
+  const params = (new URL(document.location)).searchParams;
+  const project = params.get('project');
+  const card = document.querySelector(`#${project}`);
+
+  if (card) {
+    card.click();
+  }
+}
+
 cards.forEach(card => {
   if (shouldHaveFade(card)) {
     card.addEventListener('click', function () {
@@ -60,6 +70,8 @@ cards.forEach(card => {
     card.lastElementChild.style.display = 'block';
   }
 });
+
+openProject();
 
 darkModeCat.addEventListener('click', () => {
   meow();
