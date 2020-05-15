@@ -41,6 +41,7 @@ function openProject() {
   const card = document.querySelector(`#${project}`);
 
   if (card) {
+    card.scrollIntoView();
     card.click();
   }
 }
