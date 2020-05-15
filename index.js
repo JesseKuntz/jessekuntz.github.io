@@ -48,7 +48,11 @@ function openProject() {
 
 cards.forEach(card => {
   if (shouldHaveFade(card)) {
-    card.addEventListener('click', function () {
+    card.addEventListener('click', function (event) {
+      if (event.target.tagName.toLowerCase() === 'a') {
+        return;
+      }
+
       resetCards(card);
 
       this.classList.toggle('active');
