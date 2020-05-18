@@ -6,17 +6,18 @@ const root = document.documentElement;
 const rootStyles = getComputedStyle(root);
 const cardHeight = rootStyles.getPropertyValue('--card-height');
 
-function shouldHaveFade(card) {
+function addFade(card) {
   if (card.scrollHeight > card.offsetHeight) {
-    return true;
-  }
+    const fade = document.createElement('div');
+    fade.classList.add('fade');
 
-  return false;
+    card.appendChild(fade);
+  }
 }
 
-function resetCards(currentCard) {
+function resetCards(currentCard, fade) {
   const otherCards = cards.filter(card => {
-    return (card !== currentCard) && (shouldHaveFade(card) || card.classList.value.includes('active'));
+    return (card !== currentCard) && (fade || card.classList.value.includes('active'));
   });
 
   otherCards.forEach(otherCard => {
@@ -52,41 +53,44 @@ function updateProjectParam(params) {
 }
 
 cards.forEach(card => {
-  if (shouldHaveFade(card)) {
-    card.addEventListener('click', function (event) {
-      if (event.target.tagName.toLowerCase() === 'a') {
-        return;
-      }
+  addFade(card);
 
-      resetCards(card);
+  card.addEventListener('click', function (event) {
+    if (event.target.tagName.toLowerCase() === 'a') {
+      return;
+    }
 
-      this.classList.toggle('active');
-      const fade = card.querySelector('.fade');
+    const fade = card.querySelector('.fade');
 
-      const params = (new URL(document.location)).searchParams;
+    resetCards(card, fade);
 
-      if (!card.classList.value.includes('active')) {
+    this.classList.toggle('active');
+
+    const params = (new URL(document.location)).searchParams;
+
+    if (!card.classList.value.includes('active')) {
+      if (fade) {
         card.style.height = cardHeight;
         fade.style.display = 'block';
-
-        params.delete('project');
-      } else {
-        card.style.height = '100%';
-        fade.style.display = 'none';
-
-        params.set('project', card.id);
       }
 
-      updateProjectParam(params);
+      params.delete('project');
+    } else {
+      if (fade) {
+        card.style.height = '100%';
+        fade.style.display = 'none';
+      }
 
-      window.scrollTo({
-        'left': 0,
-        'top': card.offsetTop - 20
-      });
+      params.set('project', card.id);
+    }
+
+    updateProjectParam(params);
+
+    window.scrollTo({
+      'left': 0,
+      'top': card.offsetTop - 20
     });
-
-    card.lastElementChild.style.display = 'block';
-  }
+  });
 });
 
 openProject();
