@@ -16,8 +16,9 @@ function shouldHaveFade(card) {
 
 function resetCards(currentCard) {
   const otherCards = cards.filter(card => {
-    return (card !== currentCard) && (shouldHaveFade(card) || card.classList.value.includes('active'))
-  })
+    return (card !== currentCard) && (shouldHaveFade(card) || card.classList.value.includes('active'));
+  });
+
   otherCards.forEach(otherCard => {
     otherCard.classList.remove('active');
     otherCard.style.height = cardHeight;
@@ -46,6 +47,10 @@ function openProject() {
   }
 }
 
+function updateProjectParam(params) {
+  window.history.replaceState({}, '', `${location.pathname}?${params}`);
+}
+
 cards.forEach(card => {
   if (shouldHaveFade(card)) {
     card.addEventListener('click', function (event) {
@@ -58,13 +63,21 @@ cards.forEach(card => {
       this.classList.toggle('active');
       const fade = card.querySelector('.fade');
 
-      if (card.style.height === '100%') {
+      const params = (new URL(document.location)).searchParams;
+
+      if (!card.classList.value.includes('active')) {
         card.style.height = cardHeight;
         fade.style.display = 'block';
+
+        params.delete('project');
       } else {
         card.style.height = '100%';
         fade.style.display = 'none';
+
+        params.set('project', card.id);
       }
+
+      updateProjectParam(params);
 
       window.scrollTo({
         'left': 0,
