@@ -1,12 +1,14 @@
 :root {
-  --dark-color: white;
-  --light-color: black;
-  --dark-mode-cat: url(./assets/dark-mode/black-cat.svg);
-  --light-mode-cat: url(./assets/dark-mode/white-cat.svg);
-  --link-light-color: blue;
-  --link-visited-light-color: purple;
-  --link-dark-color: orange;
-  --link-visited-dark-color: green;
+  --dark-color: #234e70;
+  --light-color: #fbf8be;
+  --dark-mode-cat: url(./assets/dark-mode/white-cat.svg);
+  --light-mode-cat: url(./assets/dark-mode/black-cat.svg);
+  --link-dark-color: #234e70;
+  --link-visited-dark-color: #234e70;
+  --link-light-color: #fbf8be;
+  --link-visited-light-color: #fbf8be;
+  --fade-light-color: #fbf8be;
+  --fade-dark-color: #234e70;
 
   --card-height: 280px;
 }
@@ -117,8 +119,8 @@ li {
   position: absolute;
   width: 100%;
   height: 70px;
-  background: linear-gradient(rgba(255,255,255,0), lightblue);
-  top: 202px;
+  background: linear-gradient(rgba(255,255,255,0), var(--fade-light-color));
+  top: 203px;
 }
 
 .card-wrapper {

@@ -102,17 +102,21 @@ darkModeCat.addEventListener('click', () => {
   const lightColor = rootStyles.getPropertyValue('--light-color');
   const darkModeImage = rootStyles.getPropertyValue('--dark-mode-cat');
   const lightModeImage = rootStyles.getPropertyValue('--light-mode-cat');
-  const linkLightColor = rootStyles.getPropertyValue('--link-light-color');
-  const linkVisitedLightColor = rootStyles.getPropertyValue('--link-visited-light-color');
   const linkDarkColor = rootStyles.getPropertyValue('--link-dark-color');
   const linkVisitedDarkColor = rootStyles.getPropertyValue('--link-visited-dark-color');
+  const linkLightColor = rootStyles.getPropertyValue('--link-light-color');
+  const linkVisitedLightColor = rootStyles.getPropertyValue('--link-visited-light-color');
+  const fadeDarkColor = rootStyles.getPropertyValue('--fade-dark-color');
+  const fadeLightColor = rootStyles.getPropertyValue('--fade-light-color');
 
   root.style.setProperty('--dark-color', lightColor);
   root.style.setProperty('--light-color', darkColor);
   root.style.setProperty('--dark-mode-cat', lightModeImage);
   root.style.setProperty('--light-mode-cat', darkModeImage);
-  root.style.setProperty('--link-light-color', linkDarkColor);
-  root.style.setProperty('--link-visited-light-color', linkVisitedDarkColor);
   root.style.setProperty('--link-dark-color', linkLightColor);
   root.style.setProperty('--link-visited-dark-color', linkVisitedLightColor);
+  root.style.setProperty('--link-light-color', linkDarkColor);
+  root.style.setProperty('--link-visited-light-color', linkVisitedDarkColor);
+  root.style.setProperty('--fade-dark-color', fadeLightColor);
+  root.style.setProperty('--fade-light-color', fadeDarkColor);
 });
