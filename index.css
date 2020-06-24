@@ -90,6 +90,10 @@ li {
   margin-top: 8px;
 }
 
+.project-header {
+  margin-bottom: 12px;
+}
+
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -117,6 +121,10 @@ li {
   top: 202px;
 }
 
+.card-wrapper {
+  margin: 12px 12px 0 0;
+}
+
 .card {
   cursor: pointer;
   border: 4px solid var(--light-color);
@@ -125,7 +133,6 @@ li {
   background-color: var(--dark-color);
   color: var(--light-color);
 
-  margin: 12px 12px 0 0;
   width: 280px;
   height: var(--card-height);
 
