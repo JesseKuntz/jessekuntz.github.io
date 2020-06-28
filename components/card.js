@@ -6,10 +6,11 @@ class ProjectCard extends HTMLElement {
 
     const title = this.getAttribute('title');
     const emoji = this.getAttribute('emoji');
+    const name = this.getAttribute('name');
     const content = this.innerHTML;
 
     this.innerHTML = `
-      <button class='card' id='model-creator'>
+      <button class='card' id=${name}>
         <div class='title-wrapper'>
           <h3 class='card-title'>
             <span>${title}</span>
