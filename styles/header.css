@@ -1,0 +1,22 @@
+.section-header {
+  user-select: none;
+}
+
+.header-wrapper:hover {
+  text-decoration: none;
+}
+
+.section-header:hover > .link {
+  display: inline-block;
+}
+
+.link {
+  display: none;
+  text-decoration: none;
+  margin-left: 8px;
+  font-size: 17px;
+}
+
+.project-header {
+  margin-bottom: 12px;
+}

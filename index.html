@@ -5,7 +5,8 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Jesse Kuntz</title>
-  <link rel='stylesheet' href='index.css'>
+  <link rel='stylesheet' href='styles/index.css'>
+  <link rel='stylesheet' href='styles/header.css'>
 
   <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" sizes="16x16">
   <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" sizes="32x32">
@@ -19,7 +20,7 @@
     <svg class='dark-mode-cat'></svg>
   </div>
 
-  <h2>About</h2>
+  <section-header title="About"></section-header>
   <ul class='text'>
     <li>Currently, I am a Software Development Engineer at Groupon.</li>
     <li>I graduated from Calvin University in 2019 with a bachelor's in computer science and minor in mathematics.</li>
@@ -27,7 +28,7 @@
       development.</li>
   </ul>
 
-  <h2>Contact</h2>
+  <section-header title="Contact"></section-header>
   <div class='contact-container'>
     <a href='mailto:jessekuntz96@gmail.com' target='_blank' class='contact-icon'>
       <svg viewBox="1 -35 511.99993 511" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +55,7 @@
     </a>
   </div>
 
-  <h2 class="project-header">Projects</h2>
+  <section-header title="Projects" innerClass="project-header"></section-header>
   <div class='projects'>
     <!-- Model Creator -->
     <project-card title="Model Creator" emoji="📈" name="model-creator">
@@ -358,6 +359,7 @@
 
 </body>
 <script src="components/card.js"></script>
+<script src="components/header.js"></script>
 <script src="index.js"></script>
 
 </html>

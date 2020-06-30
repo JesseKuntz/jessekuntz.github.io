@@ -1,8 +1,8 @@
 :root {
   --dark-color: #234e70;
   --light-color: #fbf8be;
-  --dark-mode-cat: url(./assets/dark-mode/yellow-cat.svg);
-  --light-mode-cat: url(./assets/dark-mode/blue-cat.svg);
+  --dark-mode-cat: url(../assets/dark-mode/yellow-cat.svg);
+  --light-mode-cat: url(../assets/dark-mode/blue-cat.svg);
   --link-dark-color: #234e70;
   --link-visited-dark-color: #234e70;
   --link-light-color: #fbf8be;
@@ -73,27 +73,8 @@ a svg {
   fill: var(--light-color);
 }
 
-a svg:hover {
-  animation-name: wiggle;
-  animation-duration: 1s;
-  animation-iteration-count: 100;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes wiggle {
-  0% {transform: rotate(5deg);}
-  25% {transform: rotate(-5deg);}
-  50% {transform: rotate(5deg);}
-  75% {transform: rotate(-5deg);}
-  100% {transform: rotate(5deg);}
-}
-
 li {
   margin-top: 8px;
-}
-
-.project-header {
-  margin-bottom: 12px;
 }
 
 .projects {
@@ -171,6 +152,21 @@ li {
   body {
     padding: 0 100px 100px;
     margin: auto;
+  }
+
+  a svg:hover {
+    animation-name: wiggle;
+    animation-duration: 1s;
+    animation-iteration-count: 100;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes wiggle {
+    0% {transform: rotate(5deg);}
+    25% {transform: rotate(-5deg);}
+    50% {transform: rotate(5deg);}
+    75% {transform: rotate(-5deg);}
+    100% {transform: rotate(5deg);}
   }
 
   .card:hover {

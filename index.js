@@ -81,8 +81,6 @@ cards.forEach(card => {
         fade.style.display = 'none';
       }
 
-      console.log(card.id);
-
       params.set('project', card.id);
     }
 
