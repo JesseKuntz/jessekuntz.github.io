@@ -1,0 +1,24 @@
+:root {
+  --dark-color: #234e70;
+  --light-color: #fbf8be;
+  --dark-mode-cat: url(../assets/dark-mode/yellow-cat.svg);
+  --light-mode-cat: url(../assets/dark-mode/blue-cat.svg);
+  --link-dark-color: #234e70;
+  --link-visited-dark-color: #234e70;
+  --link-light-color: #fbf8be;
+  --link-visited-light-color: #fbf8be;
+  --fade-light-color: #fbf8be;
+  --fade-dark-color: #234e70;
+
+  --card-height: 280px;
+}
+
+body {
+  margin: 0 20px;
+  padding-bottom: 100px;
+  font-family: proxima-soft, sans-serif;
+  font-weight: 200;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  max-width: 1008px;
+}

@@ -1,0 +1,31 @@
+a {
+  color: var(--link-light-color);
+}
+
+a:visited {
+  color: var(--link-visited-light-color);
+}
+
+li {
+  margin-top: 8px;
+}
+
+.row {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+}
+
+.dark-mode-cat {
+  width: 37px;
+  height: 37px;
+  background: var(--dark-mode-cat) no-repeat;
+}
+
+.dark-mode-cat, .contact-icon, .card {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
