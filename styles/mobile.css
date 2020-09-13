@@ -1,4 +1,4 @@
-@media only screen and (max-width: 420px), (max-height: 420px) {
+@media only screen and (max-width: 600px) {
   .projects {
     flex-wrap: nowrap;
     overflow-x: scroll;
