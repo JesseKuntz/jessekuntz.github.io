@@ -30,17 +30,17 @@ function playNote(key) {
   var audio = new Audio('notes/' + key + '.wav');
   audio.play();
   if (key.length > 2) {
-    document.getElementById(key).src = "images/black_key_pressed.gif";
+    document.getElementById(key).src = 'images/black_key_pressed.gif';
   } else {
-    document.getElementById(key).src = "images/white_key_pressed.gif";
+    document.getElementById(key).src = 'images/white_key_pressed.gif';
   }
 }
 
 function releaseNote(key) {
   if (key.length > 2) {
-    document.getElementById(key).src = "images/black_key.gif";
+    document.getElementById(key).src = 'images/black_key.gif';
   } else {
-    document.getElementById(key).src = "images/white_key.gif";
+    document.getElementById(key).src = 'images/white_key.gif';
   }
 }
 
@@ -49,7 +49,7 @@ document.addEventListener('keypress', (event) => {
   if (note != undefined) {
     playNote(note);
   } else {
-    console.log("\'" + event.key + "\' not mapped to a note.");
+    console.log('\'' + event.key + '\' not mapped to a note.');
   }
 });
 
@@ -58,6 +58,6 @@ document.addEventListener('keyup', (event) => {
   if (note != undefined) {
     releaseNote(note);
   } else {
-    console.log("\'" + event.key + "\' not mapped to a note.");
+    console.log('\'' + event.key + '\' not mapped to a note.');
   }
 });

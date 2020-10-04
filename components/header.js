@@ -8,10 +8,10 @@ class Header extends HTMLElement {
     const className = this.getAttribute('innerClass');
 
     this.innerHTML = `
-      <a id="${title}" href="#${title}" class="header-wrapper">
-        <h2 class="${className} section-header">
+      <a id='${title}' href='#${title}' class='header-wrapper'>
+        <h2 class='${className} section-header'>
           ${title}
-          <div class="link">🔗</div>
+          <div class='link'>🔗</div>
         </h2>
       </a>
     `;
