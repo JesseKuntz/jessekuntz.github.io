@@ -52,6 +52,16 @@ function updateProjectParam(params) {
   window.history.replaceState({}, '', `${location.pathname}?${params}`);
 }
 
+function setCardWidth() {
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth <= 600) {
+    const newSize = 0.75 * windowWidth;
+
+    root.style.setProperty('--card-width', `${newSize}px`);
+  }
+}
+
 cards.forEach(card => {
   addFade(card);
 
@@ -94,6 +104,7 @@ cards.forEach(card => {
 });
 
 openProject();
+setCardWidth();
 
 darkModeCat.addEventListener('click', () => {
   meow();

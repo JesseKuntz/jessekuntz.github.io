@@ -6,7 +6,6 @@
   }
 
   .card {
-    min-width: 85%;
     scroll-snap-align: center;
     scroll-snap-stop: always;
     margin-top: 0px;

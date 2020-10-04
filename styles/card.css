@@ -10,7 +10,7 @@
   background-color: var(--dark-color);
   color: var(--light-color);
 
-  width: 280px;
+  width: var(--card-width);
   height: var(--card-height);
 
   display: flex;
