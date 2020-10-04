@@ -40,6 +40,8 @@
   .active {
     background-color: var(--light-color);
     color: var(--dark-color);
+    width: 100%;
+    transition: width 0.3s;
   }
 
   .active a {
