@@ -1,14 +1,14 @@
 :root {
-  --dark-color: #234e70;
-  --light-color: #fbf8be;
+  --dark-color: #1d262f;
+  --light-color: #F9E0A7;
   --dark-mode-cat: url(../assets/dark-mode/yellow-cat.svg);
   --light-mode-cat: url(../assets/dark-mode/blue-cat.svg);
-  --link-dark-color: #234e70;
-  --link-visited-dark-color: #234e70;
-  --link-light-color: #fbf8be;
-  --link-visited-light-color: #fbf8be;
-  --fade-light-color: #fbf8be;
-  --fade-dark-color: #234e70;
+  --link-dark-color: #1d262f;
+  --link-visited-dark-color: #1d262f;
+  --link-light-color: #F9E0A7;
+  --link-visited-light-color: #F9E0A7;
+  --fade-light-color: #F9E0A7;
+  --fade-dark-color: #1d262f;
 
   --card-height: 280px;
   --card-width: 280px;
