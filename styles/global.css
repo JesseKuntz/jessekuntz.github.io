@@ -7,8 +7,9 @@
   --link-visited-dark-color: #1d262f;
   --link-light-color: #F9E0A7;
   --link-visited-light-color: #F9E0A7;
-  --fade-light-color: #F9E0A7;
-  --fade-dark-color: #1d262f;
+  --fade-light-color: #50BAA9;
+  --fade-dark-color: #50BAA9;
+  --accent-color: #FF5370;
 
   --card-height: 280px;
   --card-width: 280px;

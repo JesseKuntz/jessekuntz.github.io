@@ -3,7 +3,7 @@
   width: 200px;
   height: 200px;
   border-radius: 100%;
-  border: 4px solid var(--light-color);
+  border: 4px solid var(--accent-color);
 }
 
 @media only screen and (max-width: 600px) {
