@@ -1,8 +1,8 @@
 :root {
   --dark-color: #1d262f;
   --light-color: #F9E0A7;
-  --dark-mode-cat: url(../assets/dark-mode/yellow-cat.svg);
-  --light-mode-cat: url(../assets/dark-mode/blue-cat.svg);
+  --dark-mode-cat: url(../assets/dark-mode/sand-cat.svg);
+  --light-mode-cat: url(../assets/dark-mode/ocean-cat.svg);
   --link-dark-color: #1d262f;
   --link-visited-dark-color: #1d262f;
   --link-light-color: #F9E0A7;
