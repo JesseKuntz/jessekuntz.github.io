@@ -4,7 +4,7 @@ class Header extends HTMLElement {
   constructor() {
     super();
 
-    let title = this.getAttribute('title');
+    const title = this.getAttribute('title');
     const className = this.getAttribute('innerClass');
 
     this.innerHTML = `

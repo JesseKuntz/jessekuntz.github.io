@@ -1,5 +1,4 @@
 const cards = [...document.getElementsByClassName('card')];
-const panels = [...document.getElementsByClassName('panel')];
 const darkModeCat = document.querySelector('.dark-mode-cat');
 
 const root = document.documentElement;
@@ -16,9 +15,10 @@ function addFade(card) {
 }
 
 function resetCards(currentCard, fade) {
-  const otherCards = cards.filter(card => {
-    return (card !== currentCard) && (fade || card.classList.value.includes('active'));
-  });
+  const otherCards = cards.filter(
+    card =>
+      card !== currentCard && (fade || card.classList.value.includes('active'))
+  );
 
   otherCards.forEach(otherCard => {
     otherCard.classList.remove('active');
@@ -38,7 +38,7 @@ function meow() {
 }
 
 function openProject() {
-  const params = (new URL(document.location)).searchParams;
+  const params = new URL(document.location).searchParams;
   const project = params.get('project');
   const card = document.querySelector(`#${project}`);
 
@@ -49,7 +49,7 @@ function openProject() {
 }
 
 function updateProjectParam(params) {
-  window.history.replaceState({}, '', `${location.pathname}?${params}`);
+  window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
 }
 
 function setCardWidth() {
@@ -65,7 +65,7 @@ function setCardWidth() {
 cards.forEach(card => {
   addFade(card);
 
-  card.addEventListener('click', function (event) {
+  card.addEventListener('click', function clickHandler(event) {
     if (event.target.tagName.toLowerCase() === 'a') {
       return;
     }
@@ -76,7 +76,7 @@ cards.forEach(card => {
 
     this.classList.toggle('active');
 
-    const params = (new URL(document.location)).searchParams;
+    const params = new URL(document.location).searchParams;
 
     if (!card.classList.value.includes('active')) {
       if (fade) {
@@ -97,8 +97,8 @@ cards.forEach(card => {
     updateProjectParam(params);
 
     window.scrollTo({
-      'left': 0,
-      'top': card.offsetTop - 20
+      left: 0,
+      top: card.offsetTop - 20,
     });
   });
 });
@@ -114,9 +114,13 @@ darkModeCat.addEventListener('click', () => {
   const darkModeImage = rootStyles.getPropertyValue('--dark-mode-cat');
   const lightModeImage = rootStyles.getPropertyValue('--light-mode-cat');
   const linkDarkColor = rootStyles.getPropertyValue('--link-dark-color');
-  const linkVisitedDarkColor = rootStyles.getPropertyValue('--link-visited-dark-color');
+  const linkVisitedDarkColor = rootStyles.getPropertyValue(
+    '--link-visited-dark-color'
+  );
   const linkLightColor = rootStyles.getPropertyValue('--link-light-color');
-  const linkVisitedLightColor = rootStyles.getPropertyValue('--link-visited-light-color');
+  const linkVisitedLightColor = rootStyles.getPropertyValue(
+    '--link-visited-light-color'
+  );
   const fadeDarkColor = rootStyles.getPropertyValue('--fade-dark-color');
   const fadeLightColor = rootStyles.getPropertyValue('--fade-light-color');
 
