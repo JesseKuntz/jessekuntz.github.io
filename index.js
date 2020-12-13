@@ -77,6 +77,8 @@ cards.forEach(card => {
     resetCards(card, fade);
 
     this.classList.toggle('active');
+    this.parentElement.classList.toggle('modal');
+    document.body.classList.toggle('modal-open');
 
     const params = new URL(document.location).searchParams;
 
@@ -89,7 +91,7 @@ cards.forEach(card => {
       params.delete('project');
     } else {
       if (fade) {
-        card.style.height = '100%';
+        card.style.height = 'fit-content';
         fade.style.display = 'none';
       }
 
@@ -97,11 +99,6 @@ cards.forEach(card => {
     }
 
     updateProjectParam(params);
-
-    window.scrollTo({
-      left: 0,
-      top: card.offsetTop - 20,
-    });
   });
 });
 
