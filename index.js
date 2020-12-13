@@ -62,6 +62,8 @@ function setCardWidth() {
   }
 }
 
+new window.LazyLoad();
+
 cards.forEach(card => {
   addFade(card);
 
