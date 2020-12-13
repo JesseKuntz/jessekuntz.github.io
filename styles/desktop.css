@@ -40,6 +40,7 @@
   .active {
     margin: 20px auto;
     width: 50%;
+    max-width: 680px;
   }
 
   .modal {
