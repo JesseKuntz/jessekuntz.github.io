@@ -59,4 +59,8 @@
   .modal-open {
     overflow-y: hidden;
   }
+
+  a:hover {
+    text-decoration: none;
+  }
 }
