@@ -5,6 +5,9 @@ const root = document.documentElement;
 const rootStyles = getComputedStyle(root);
 const cardHeight = rootStyles.getPropertyValue('--card-height');
 
+const projectPlaceholder = document.createElement('div');
+projectPlaceholder.classList.add('card-wrapper', 'placeholder');
+
 function addFade(card) {
   if (card.scrollHeight > card.offsetHeight) {
     const fade = document.createElement('div');
@@ -82,6 +85,7 @@ cards.forEach(card => {
 
     const params = new URL(document.location).searchParams;
 
+    // Closing
     if (!card.classList.value.includes('active')) {
       if (fade) {
         card.style.height = cardHeight;
@@ -89,13 +93,21 @@ cards.forEach(card => {
       }
 
       params.delete('project');
-    } else {
+
+      projectPlaceholder.remove();
+    }
+    // Opening
+    else {
       if (fade) {
         card.style.height = 'fit-content';
         fade.style.display = 'none';
       }
 
       params.set('project', card.id);
+
+      document
+        .querySelector('.projects')
+        .insertBefore(projectPlaceholder, card.parentNode);
     }
 
     updateProjectParam(params);

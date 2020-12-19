@@ -10,4 +10,8 @@
     scroll-snap-stop: always;
     margin-top: 0px;
   }
+
+  .placeholder {
+    display: none;
+  }
 }

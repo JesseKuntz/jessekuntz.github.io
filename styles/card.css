@@ -61,3 +61,10 @@
   background: linear-gradient(rgba(255,255,255,0), var(--fade-light-color));
   top: 203px;
 }
+
+.placeholder {
+  width: var(--card-width);
+  height: var(--card-height);
+  background-color: var(--light-color);
+  border-radius: 8px;
+}
