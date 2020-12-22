@@ -46,8 +46,11 @@ function openProject() {
   const card = document.querySelector(`#${project}`);
 
   if (card) {
-    card.scrollIntoView();
     card.click();
+
+    const { left, top } = card.getBoundingClientRect();
+    document.querySelector('.projects').scrollTo(left, 0);
+    window.scrollTo(0, top);
   }
 }
 
