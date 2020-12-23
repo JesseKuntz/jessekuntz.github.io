@@ -14,4 +14,8 @@
   .placeholder {
     display: none;
   }
+
+  .project-image {
+    display: flex;
+  }
 }

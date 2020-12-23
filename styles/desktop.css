@@ -63,4 +63,8 @@
   a:hover {
     text-decoration: none;
   }
+
+  .project-image {
+    margin-right: 8px;
+  }
 }
