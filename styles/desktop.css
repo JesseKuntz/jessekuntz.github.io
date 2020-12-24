@@ -64,7 +64,7 @@
     text-decoration: none;
   }
 
-  .project-image {
+  .card.active .project-image {
     margin-right: 8px;
   }
 }
