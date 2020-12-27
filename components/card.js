@@ -1,5 +1,3 @@
-'use strict';
-
 class ProjectCard extends HTMLElement {
   constructor() {
     super();

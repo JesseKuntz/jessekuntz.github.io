@@ -24,6 +24,7 @@ h1 {
   width: 37px;
   height: 37px;
   background: var(--dark-mode-cat) no-repeat;
+  cursor: pointer;
 }
 
 .dark-mode-cat, .contact-icon, .card {

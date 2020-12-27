@@ -19,17 +19,6 @@
   <meta name='description'
     content="Hi, I'm Jesse Kuntz, a software developer who loves web development and Raspberry Pi's!">
 
-  <link rel='stylesheet' href='styles/global.css'>
-  <link rel='stylesheet' href='styles/hero.css'>
-  <link rel='stylesheet' href='styles/headers.css'>
-  <link rel='stylesheet' href='styles/card.css'>
-  <link rel='stylesheet' href='styles/contact.css'>
-  <link rel='stylesheet' href='styles/about.css'>
-  <link rel='stylesheet' href='styles/projects.css'>
-  <link rel='stylesheet' href='styles/misc.css'>
-  <link rel='stylesheet' href='styles/mobile.css'>
-  <link rel='stylesheet' href='styles/desktop.css'>
-
   <link rel='icon' type='image/svg+xml' href='assets/favicons/favicon.svg' sizes='16x16'>
   <link rel='icon' type='image/svg+xml' href='assets/favicons/favicon.svg' sizes='32x32'>
   <link rel='icon' type='image/svg+xml' href='assets/favicons/favicon.svg' sizes='64x64'>
@@ -43,7 +32,8 @@
   </div>
 
   <picture class='hero-image-container'>
-    <source srcset='assets/hero/hero.webp' type='image/webp' />
+    <!-- html-loader doesn't like this... for now -->
+    <!-- <source srcset='assets/hero/hero.webp' type='image/webp' /> -->
     <source srcset='assets/hero/hero.jpg' type='image/png' />
     <img class='hero-image' src='assets/hero/hero.jpg' />
   </picture>
@@ -187,22 +177,6 @@
       <p>
         More details are in the <a href='https://github.com/JesseKuntz/my-piano' target='_blank'>Github
           repository</a>.
-      </p>
-    </project-card>
-
-    <!-- JS Piano -->
-    <project-card title='JavaScript Piano' emoji='🎹' name='javascript-piano'>
-      <p>
-        A two-octave digital piano, written in JavaScript! Hold shift to play the upper octaves (sorry, users on
-        touch!).
-      </p>
-
-      <p>
-        Click <a href='assets/projects/js-piano/js-piano.html' target='_blank'>here</a> to open a new tab and play it.
-        The
-        <a href='https://github.com/JesseKuntz/my-piano' target='_blank'>Github repository</a> for the Python version
-        has
-        some instructions on how to play!
       </p>
     </project-card>
 
@@ -382,7 +356,7 @@
         code can be programmed into the Teensy in order to make it recognizable as a MIDI controller.
       </p>
 
-      <p><a href='assets/projects/midi-code.html' target='_blank'>MIDI Code</a></p>
+      <p><a href='https://gist.github.com/JesseKuntz/9f59204ee5de2190f2e25cc63336fcd2#file-midi-h' target='_blank'>MIDI Code</a></p>
     </project-card>
 
     <!-- Pi Retrobox -->
@@ -409,9 +383,5 @@
 
   <script src='https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.0/dist/lazyload.min.js'></script>
 </body>
-
-<script src='components/card.js'></script>
-<script src='components/header.js'></script>
-<script src='index.js'></script>
 
 </html>

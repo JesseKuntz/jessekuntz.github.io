@@ -1,3 +1,17 @@
+// Components
+require('./components/card');
+require('./components/header');
+
+// Styles
+require('./styles/index.css');
+
+// Sounds
+const sounds = [
+  require('./assets/dark-mode/meow0.mp3'),
+  require('./assets/dark-mode/meow1.mp3'),
+  require('./assets/dark-mode/meow2.mp3'),
+];
+
 const cards = [...document.getElementsByClassName('card')];
 const darkModeCat = document.querySelector('.dark-mode-cat');
 
@@ -36,7 +50,7 @@ function getRandomInt(max) {
 
 function meow() {
   const random = getRandomInt(3);
-  const audio = new Audio(`assets/dark-mode/meow${random}.mp3`);
+  const audio = new Audio(sounds[random]);
   audio.play();
 }
 
