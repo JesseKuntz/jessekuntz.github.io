@@ -24,4 +24,6 @@ jobs:
     - name: Build
       run: npm run build
     - name: Deploy
-      run: npm run deploy
+      run: |
+        git config user.name "JesseKuntz" && git config user.email "jessekuntz96@gmail.com"
+        npm run deploy
