@@ -134,6 +134,10 @@ body {
   margin-left: 8px;
 }
 
+.project-image.circle {
+  border-radius: 100%;
+}
+
 .fade {
   position: absolute;
   width: 100%;
