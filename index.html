@@ -126,6 +126,20 @@
       </p>
     </project-card>
 
+    <!-- Emoji Sprinkle -->
+    <project-card title='Emoji Sprinkle' emoji='🧁' name='emoji-sprinkle'>
+      <p>
+        A package for sprinkling emojis across your screen! I originally made it for If They Were This, but thought that others might enjoy using it too so I pulled it into its own package.
+      </p>
+
+      <div class='emoji-sprinkle-button' onclick="window.EmojiSprinkle.sprinkleEmojis({emoji: '😸'})">Try it out!</div>
+
+      <p>
+        Source code in the <a href='https://github.com/JesseKuntz/emoji-sprinkle' target='_blank'>Github
+          repository</a>.
+      </p>
+    </project-card>
+
     <!-- Model Creator -->
     <project-card title='Model Creator' emoji='📈' name='model-creator'>
       <p>
@@ -428,6 +442,7 @@
   </div>
 
   <script src='https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.0/dist/lazyload.min.js'></script>
+  <script async src='https://unpkg.com/emoji-sprinkle/dist/window.js'></script>
 </body>
 
 </html>

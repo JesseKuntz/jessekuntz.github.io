@@ -88,7 +88,10 @@ cards.forEach(card => {
   addFade(card);
 
   card.addEventListener('click', function clickHandler(event) {
-    if (event.target.tagName.toLowerCase() === 'a') {
+    if (
+      event.target.tagName.toLowerCase() === 'a' ||
+      event.target.classList.contains('emoji-sprinkle-button')
+    ) {
       return;
     }
 

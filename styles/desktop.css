@@ -67,4 +67,10 @@
   .card.active .project-image {
     margin-right: 8px;
   }
+
+  .emoji-sprinkle-button:hover {
+    background: var(--dark-color);
+    color: var(--light-color);
+    border: 4px solid var(--light-color);
+  }
 }
