@@ -181,6 +181,21 @@ a svg {
   padding-bottom: 10px;
 }
 
+.emoji-sprinkle-button {
+  background: var(--light-color);
+  color: var(--dark-color);
+  display: inline-block;
+  padding: 8px;
+  border: 4px solid var(--light-color);
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.emoji-sprinkle {
+  z-index: 1;
+}
+
 a {
   color: var(--link-light-color);
 }
@@ -304,6 +319,12 @@ h1 {
 
   .card.active .project-image {
     margin-right: 8px;
+  }
+
+  .emoji-sprinkle-button:hover {
+    background: var(--dark-color);
+    color: var(--light-color);
+    border: 4px solid var(--light-color);
   }
 }
 
