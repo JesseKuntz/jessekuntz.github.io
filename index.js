@@ -1,3 +1,5 @@
+'use strict';
+
 // Components
 require('./components/card');
 require('./components/header');
