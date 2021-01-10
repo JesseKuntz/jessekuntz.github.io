@@ -30,3 +30,14 @@ h1 {
 .dark-mode-cat, .contact-icon, .card {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+.horizontal-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center-everything {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
