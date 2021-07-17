@@ -22,6 +22,11 @@ project-card::after {
   display: none;
 }
 
+.no-after {
+  height: 100%;
+  overflow: initial;
+}
+
 .card {
   cursor: pointer;
   border: 4px solid var(--light-color);
