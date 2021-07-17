@@ -49,6 +49,13 @@ body {
 
 .section-header {
   user-select: none;
+  margin: 0;
+}
+
+section-header {
+  display: flex;
+  height: 68px;
+  align-items: center;
 }
 
 .header-wrapper:hover {
@@ -66,12 +73,28 @@ body {
   font-size: 17px;
 }
 
-.project-header {
-  margin-bottom: 12px;
+project-card {
+  margin: 12px 12px 0 0;
+  width: var(--card-width);
+  height: var(--card-height);
+
+  position: relative;
+  overflow: hidden;
 }
 
-.card-wrapper {
-  margin: 12px 12px 0 0;
+project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-color);
+  border-radius: 8px;
+}
+
+.no-after::after {
+  display: none;
 }
 
 .card {
@@ -129,6 +152,7 @@ body {
 
 .project-image.inline {
   max-width: 100px;
+  height: 100px;
   float: right;
   margin-top: 8px;
   margin-left: 8px;
@@ -151,6 +175,7 @@ body {
   height: var(--card-height);
   background-color: var(--light-color);
   border-radius: 8px;
+  margin: 12px 12px 0 0;
 }
 
 .contact {
@@ -172,7 +197,12 @@ a svg {
 }
 
 .about {
-  font-size: 18px
+  font-size: 18px;
+  margin: 0;
+}
+
+li:first-child {
+  margin-top: 0;
 }
 
 .projects {
