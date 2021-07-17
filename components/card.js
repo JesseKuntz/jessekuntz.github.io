@@ -23,7 +23,7 @@ class ProjectCard extends HTMLElement {
       </button>
     `;
 
-    this.className = 'card-wrapper';
+    this.className = 'no-after';
   }
 }
 

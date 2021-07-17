@@ -22,7 +22,7 @@ const rootStyles = getComputedStyle(root);
 const cardHeight = rootStyles.getPropertyValue('--card-height');
 
 const projectPlaceholder = document.createElement('div');
-projectPlaceholder.classList.add('card-wrapper', 'placeholder');
+projectPlaceholder.classList.add('placeholder');
 
 function addFade(card) {
   if (card.scrollHeight > card.offsetHeight) {
