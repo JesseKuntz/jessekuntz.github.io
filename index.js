@@ -104,10 +104,12 @@ new window.LazyLoad();
 cards.forEach(card => {
   addFade(card);
 
-  card.addEventListener('click', function clickHandler(event) {
+  card.parentElement.addEventListener('click', function clickHandler(event) {
+    const clickedElement = event.target;
+
     if (
-      event.target.tagName.toLowerCase() === 'a' ||
-      event.target.classList.contains('emoji-sprinkle-button')
+      clickedElement.tagName.toLowerCase() === 'a' ||
+      clickedElement.classList.contains('emoji-sprinkle-button')
     ) {
       return;
     }
@@ -116,14 +118,14 @@ cards.forEach(card => {
 
     resetCards(card, fade);
 
-    this.classList.toggle('active');
-    this.parentElement.classList.toggle('modal');
+    this.children[0].classList.toggle('active');
+    this.classList.toggle('modal');
     document.body.classList.toggle('modal-open');
 
     const params = new URL(document.location).searchParams;
 
     // Closing
-    if (!card.classList.value.includes('active')) {
+    if (!this.classList.value.includes('modal')) {
       if (fade) {
         card.style.height = cardHeight;
         fade.style.display = 'block';
