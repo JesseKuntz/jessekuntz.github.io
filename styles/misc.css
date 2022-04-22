@@ -16,11 +16,14 @@ li {
   justify-content: space-between;
 }
 
-.viewport-container {
+.center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.viewport-container {
   height: 100vh;
 }
 
