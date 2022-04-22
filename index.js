@@ -2,7 +2,6 @@
 
 // Components
 require('./components/card');
-require('./components/header');
 
 // Styles
 require('./styles/index.css');
