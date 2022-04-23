@@ -33,7 +33,7 @@ h1 {
   text-align: center;
 }
 
-.dark-mode-cat {
+.cat {
   width: 37px;
   height: 37px;
   background: var(--dark-mode-cat) no-repeat;
@@ -43,6 +43,6 @@ h1 {
   right: 20px;
 }
 
-.dark-mode-cat, .contact-icon, .card {
+.cat, .contact-icon, .card {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

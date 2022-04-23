@@ -14,7 +14,7 @@ const sounds = [
 ];
 
 const cards = [...document.getElementsByClassName('card')];
-const darkModeCat = document.querySelector('.dark-mode-cat');
+const cat = document.querySelector('.cat');
 
 const root = document.documentElement;
 const rootStyles = getComputedStyle(root);
@@ -155,7 +155,7 @@ cards.forEach(card => {
 openProject();
 setCardWidth(0.87);
 
-darkModeCat.addEventListener('click', () => {
+cat.addEventListener('click', () => {
   meow();
 
   const darkColor = rootStyles.getPropertyValue('--dark-color');
