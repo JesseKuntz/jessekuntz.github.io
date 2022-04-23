@@ -1,17 +1,12 @@
 .contact {
   display: flex;
-  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 200px;
+  justify-content: space-between;
 }
 
 a svg {
-  height: 50px;
-  width: 50px;
-  margin-right: 20px;
+  height: 40px;
+  width: 40px;
   fill: var(--light-color);
-}
-
-@media only screen and (max-width: 249px) {
-  svg {
-    margin-top: 10px;
-  }
 }
