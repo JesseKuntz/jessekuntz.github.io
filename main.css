@@ -10,7 +10,8 @@
   --link-visited-light-color: #F9E0A7;
   --fade-light-color: #50BAA9;
   --fade-dark-color: #50BAA9;
-  --accent-color: #FF5370;
+  --coral-color: #FF5370;
+  --orange-color: #FFA500;
 
   --card-height: 280px;
   --card-width: 280px;
@@ -18,60 +19,52 @@
 
 body {
   font-family: 'Inconsolata', monospace;
-  margin: 0 8px;
-  padding-bottom: 100px;
+  margin: 0;
+  padding: 0;
   font-weight: 200;
   background-color: var(--dark-color);
   color: var(--light-color);
   max-width: 1008px;
 }
 
-.hero-image {
-  margin-top: 20px;
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  border: 4px solid var(--accent-color);
-}
-
-@media only screen and (max-width: 600px) {
-  .hero-image-container {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-@media only screen and (min-width: 601px) {
-  .hero-image {
-    float: right;
-    margin-left: 20px;
-  }
-}
-
-.section-header {
-  user-select: none;
-  margin: 0;
-}
-
-section-header {
+.hero-image-container {
+  position: relative;
+  width: 310px;
+  height: 310px;
+  margin-top: 40px;
   display: flex;
-  height: 68px;
+  justify-content: center;
   align-items: center;
 }
 
-.header-wrapper:hover {
-  text-decoration: none;
+.hero-image-container > picture {
+  height: 300px;
 }
 
-.section-header:hover > .link {
-  display: inline-block;
+.hero-image {
+  border-radius: 50%;
 }
 
-.link {
-  display: none;
-  text-decoration: none;
-  margin-left: 8px;
-  font-size: 17px;
+.hero-circle {
+  background-image: linear-gradient(var(--coral-color), var(--orange-color));
+  padding: 1px;
+  width: 310px;
+  height: 310px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 50%;
+  border-width: 1px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(180deg); }
+  75% { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
 }
 
 project-card {
@@ -90,7 +83,7 @@ project-card::after {
   width: 100%;
   height: 100%;
   background-color: var(--light-color);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .no-after::after {
@@ -105,7 +98,7 @@ project-card::after {
 .card {
   cursor: pointer;
   border: 4px solid var(--light-color);
-  border-radius: 8px;
+  border-radius: 4px;
   outline: none;
   background-color: var(--dark-color);
   color: var(--light-color);
@@ -120,6 +113,10 @@ project-card::after {
   font-weight: 200;
   position: relative;
   box-shadow: 0 10px 5px -5px rgba(0,0,0,0.75);
+}
+
+.card.active {
+  cursor: default;
 }
 
 .title-wrapper {
@@ -148,7 +145,7 @@ project-card::after {
   width: 98%;
   max-width: 300px;
   border: 3px solid var(--light-color);
-  border-radius: 8px;
+  border-radius: 4px;
   margin: 0 auto 8px;
 }
 
@@ -156,7 +153,7 @@ project-card::after {
   max-width: 100px;
   height: 100px;
   float: right;
-  margin-top: 8px;
+  margin-top: 18px;
   margin-left: 8px;
 }
 
@@ -176,35 +173,21 @@ project-card::after {
   width: var(--card-width);
   height: var(--card-height);
   background-color: var(--light-color);
-  border-radius: 8px;
+  border-radius: 4px;
   margin: 12px 12px 0 0;
 }
 
 .contact {
   display: flex;
-  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 200px;
+  justify-content: space-between;
 }
 
 a svg {
-  height: 50px;
-  width: 50px;
-  margin-right: 20px;
+  height: 40px;
+  width: 40px;
   fill: var(--light-color);
-}
-
-@media only screen and (max-width: 249px) {
-  svg {
-    margin-top: 10px;
-  }
-}
-
-.about {
-  font-size: 18px;
-  margin: 0;
-}
-
-li:first-child {
-  margin-top: 0;
 }
 
 .projects {
@@ -260,26 +243,115 @@ li {
   justify-content: space-between;
 }
 
-h1 {
-  margin: 0;
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.dark-mode-cat {
+.viewport-container {
+  height: 100vh;
+}
+
+h1 {
+  margin: 0 20px;
+  font-size: 100px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.cat {
   width: 37px;
   height: 37px;
   background: var(--dark-mode-cat) no-repeat;
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-.dark-mode-cat, .contact-icon, .card {
+.cat, .contact-icon, .card {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.about {
+  font-size: 20px;
+  display: flex;
+  color: var(--dark-color);
+  height: 220px;
+}
+
+.about-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 33.33%;
+  height: 100%;
+  padding: 0 20px;
+  border-radius: 4px;
+  background: var(--light-color);
+}
+
+.about-card:not(:last-child) {
+  margin: 0 20px 0 0;
+}
+
+.about-card > div > a {
+  color: var(--dark-color);
+}
+
 @media only screen and (max-width: 830px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .hero-image-container {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-image-container > picture {
+    height: 230px;
+  }
+
+  .hero-image {
+    width: 230px;
+    height: 230px;
+  }
+
+  .hero-circle {
+    background-image: linear-gradient(var(--coral-color), var(--orange-color));
+    width: 240px;
+    height: 240px;
+  }
+
+  .about {
+    flex-direction: column;
+    height: auto;
+    margin: 0 20px;
+  }
+
+  .about-card {
+    width: auto;
+    padding: 20px;
+  }
+
+  .about-card:not(:last-child) {
+    margin: 0 0 20px;
+  }
+
   .projects {
     flex-wrap: nowrap;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    padding-bottom: 100px;
+    padding-left: 20px;
   }
 
   .card {
@@ -371,6 +443,10 @@ h1 {
     background: var(--dark-color);
     color: var(--light-color);
     border: 4px solid var(--light-color);
+  }
+
+  .projects {
+    justify-content: center;
   }
 }
 
