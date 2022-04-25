@@ -33,6 +33,11 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
 .cat {
   width: 37px;
   height: 37px;

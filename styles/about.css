@@ -1,8 +1,26 @@
 .about {
-  font-size: 18px;
-  margin: 0;
+  font-size: 20px;
+  display: flex;
+  color: var(--dark-color);
+  height: 220px;
 }
 
-li:first-child {
-  margin-top: 0;
+.about-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 33.33%;
+  height: 100%;
+  padding: 0 20px;
+  border-radius: 4px;
+  background: var(--light-color);
+}
+
+.about-card:not(:last-child) {
+  margin: 0 20px 0 0;
+}
+
+.about-card > div > a {
+  color: var(--dark-color);
 }
