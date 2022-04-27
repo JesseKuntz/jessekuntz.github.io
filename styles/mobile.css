@@ -59,4 +59,13 @@
   .project-image {
     display: flex;
   }
+
+  .active {
+    margin: 12px auto;
+    width: 94%;
+  }
+
+  .modal {
+    background-color: #000;
+  }
 }
