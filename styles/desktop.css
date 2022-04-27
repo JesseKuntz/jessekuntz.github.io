@@ -4,6 +4,10 @@
     margin: auto;
   }
 
+  .viewport-container {
+    height: 100vh;
+  }
+
   a svg:hover {
     animation-name: wiggle;
     animation-duration: 1s;

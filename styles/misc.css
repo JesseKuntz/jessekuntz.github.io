@@ -23,10 +23,6 @@ li {
   align-items: center;
 }
 
-.viewport-container {
-  height: 100vh;
-}
-
 h1 {
   margin: 0 20px;
   font-size: 90px;
