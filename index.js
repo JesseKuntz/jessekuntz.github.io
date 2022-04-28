@@ -103,12 +103,13 @@ new window.LazyLoad();
 cards.forEach(card => {
   addFade(card);
 
-  card.parentElement.addEventListener('click', function clickHandler(event) {
+  card.addEventListener('click', function clickHandler(event) {
     const clickedElement = event.target;
 
+    // Only close the card if the close button was clicked
     if (
-      clickedElement.tagName.toLowerCase() === 'a' ||
-      clickedElement.classList.contains('emoji-sprinkle-button')
+      card.classList.value.includes('active') &&
+      clickedElement.classList.value !== 'close-button'
     ) {
       return;
     }
@@ -117,14 +118,14 @@ cards.forEach(card => {
 
     resetCards(card, fade);
 
-    this.children[0].classList.toggle('active');
-    this.classList.toggle('modal');
+    this.classList.toggle('active');
+    this.parentElement.classList.toggle('modal');
     document.body.classList.toggle('modal-open');
 
     const params = new URL(document.location).searchParams;
 
-    // Closing
-    if (!this.classList.value.includes('modal')) {
+    // If the card is now closed
+    if (!card.classList.value.includes('active')) {
       if (fade) {
         card.style.height = cardHeight;
         fade.style.display = 'block';
@@ -134,7 +135,7 @@ cards.forEach(card => {
 
       projectPlaceholder.remove();
     }
-    // Opening
+    // If the card is now open
     else {
       if (fade) {
         card.style.height = 'fit-content';
