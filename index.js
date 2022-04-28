@@ -103,23 +103,14 @@ new window.LazyLoad();
 cards.forEach(card => {
   addFade(card);
 
-  card.addEventListener('click', function clickHandler(event) {
-    const clickedElement = event.target;
+  const fade = card.querySelector('.fade');
+  const overlay = card.nextElementSibling;
 
-    // Only close the card if the close button was clicked
-    if (
-      card.classList.value.includes('active') &&
-      clickedElement.classList.value !== 'close-button'
-    ) {
-      return;
-    }
-
-    const fade = card.querySelector('.fade');
-
+  const toggleModal = () => {
     resetCards(card, fade);
 
-    this.classList.toggle('active');
-    this.parentElement.classList.toggle('modal');
+    card.classList.toggle('active');
+    card.parentElement.classList.toggle('modal');
     document.body.classList.toggle('modal-open');
 
     const params = new URL(document.location).searchParams;
@@ -150,6 +141,21 @@ cards.forEach(card => {
     }
 
     updateProjectParam(params);
+  };
+
+  overlay.addEventListener('click', () => {
+    toggleModal();
+  });
+
+  card.addEventListener('click', event => {
+    if (
+      card.classList.value.includes('active') &&
+      event.target.classList.value !== 'close-button'
+    ) {
+      return;
+    }
+
+    toggleModal();
   });
 });
 

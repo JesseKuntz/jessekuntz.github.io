@@ -24,6 +24,7 @@ class ProjectCard extends HTMLElement {
           ${content}
         </div>
       </button>
+      <div class='overlay'></div>
     `;
 
     this.className = 'no-after';
