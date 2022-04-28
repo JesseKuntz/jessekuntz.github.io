@@ -4,8 +4,11 @@
     margin: auto;
   }
 
-  .viewport-container {
-    height: 100vh;
+  @media (min-height: 620px) {
+    .viewport-container {
+      height: 100vh;
+      padding: 0;
+    }
   }
 
   a svg:hover {

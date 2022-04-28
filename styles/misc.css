@@ -1,3 +1,7 @@
+.viewport-container {
+  padding: 60px 0;
+}
+
 a {
   color: var(--link-light-color);
 }
