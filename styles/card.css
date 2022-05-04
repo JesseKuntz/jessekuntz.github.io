@@ -1,3 +1,31 @@
+project-card {
+  margin: 12px 12px 0 0;
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  overflow: hidden;
+}
+
+project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-color);
+  border-radius: 4px;
+}
+
+.no-after::after {
+  display: none;
+}
+
+.no-after {
+  height: 100%;
+  overflow: initial;
+}
+
 .card {
   cursor: pointer;
   border: 4px solid var(--light-color);
@@ -91,7 +119,7 @@
 }
 
 .modal .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -128,40 +156,10 @@
   box-shadow: none;
 }
 
-/* Everything below needed for the placeholders */
-
 .placeholder {
   width: var(--card-width);
   height: var(--card-height);
   background-color: var(--light-color);
   border-radius: 4px;
   margin: 12px 12px 0 0;
-}
-
-project-card {
-  margin: 12px 12px 0 0;
-  width: var(--card-width);
-  height: var(--card-height);
-  position: relative;
-  overflow: hidden;
-}
-
-project-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--light-color);
-  border-radius: 4px;
-}
-
-.no-after::after {
-  display: none;
-}
-
-.no-after {
-  height: 100%;
-  overflow: initial;
 }
