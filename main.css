@@ -119,9 +119,33 @@ project-card::after {
 }
 
 .title-wrapper {
-  border-bottom: 2px solid var(--light-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--light-color);
   color: var(--dark-color);
+}
+
+.emoji {
+  font-size: 50px;
+  margin-bottom: 12px;
+}
+
+.card.active .title-wrapper {
+  position: relative;
+  display: block;
+  border-bottom: 2px solid var(--light-color);
+  background-color: var(--light-color);
+}
+
+.card.active .emoji {
+  display: none;
 }
 
 .card-title {
@@ -160,26 +184,11 @@ project-card::after {
   border-radius: 100%;
 }
 
-.fade {
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  background: linear-gradient(rgba(255,255,255,0), var(--fade-light-color));
-  top: 203px;
-}
-
-.placeholder {
-  width: var(--card-width);
-  height: var(--card-height);
-  background-color: var(--light-color);
-  border-radius: 4px;
-  margin: 12px 12px 0 0;
-}
-
 .active {
   margin: 20px auto;
   width: 50%;
   max-width: 680px;
+  z-index: 3;
 }
 
 .modal {
@@ -190,8 +199,17 @@ project-card::after {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
   margin: 0;
+}
+
+.modal .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-open {
@@ -209,9 +227,10 @@ project-card::after {
 
 .close-button {
   display: none;
+  position: relative;
   background: var(--coral-color);
   color: #FFF;
-  padding: 2px 8px;
+  padding: 4px;
   border-radius: 4px;
   margin: 0 0 3px 12px;
   cursor: pointer;
@@ -220,6 +239,52 @@ project-card::after {
 
 .close-button:hover {
   box-shadow: none;
+}
+
+.close-button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.placeholder {
+  width: var(--card-width);
+  height: var(--card-height);
+  background-color: var(--light-color);
+  border-radius: 4px;
+  margin: 12px 12px 0 0;
+}
+
+.gg-close {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 40px
+}
+
+.gg-close::after,
+.gg-close::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  top: 8px;
+  left: 1px
+}
+
+.gg-close::after {
+  transform: rotate(-45deg)
 }
 
 .contact {
@@ -270,6 +335,10 @@ a svg {
   margin-left: 4px;
 }
 
+.viewport-container {
+  padding: 60px 0;
+}
+
 a {
   color: var(--link-light-color);
 }
@@ -297,7 +366,7 @@ li {
 
 h1 {
   margin: 0 20px;
-  font-size: 90px;
+  font-size: 80px;
   text-align: center;
 }
 
@@ -350,10 +419,6 @@ h2 {
 @media only screen and (max-width: 830px) {
   h1 {
     font-size: 60px;
-  }
-
-  .viewport-container {
-    padding: 60px 0;
   }
 
   .hero-image-container {
@@ -417,10 +482,6 @@ h2 {
     margin: 12px auto;
     width: 94%;
   }
-
-  .modal {
-    background-color: #000;
-  }
 }
 
 @media only screen and (min-width: 831px) {
@@ -429,8 +490,11 @@ h2 {
     margin: auto;
   }
 
-  .viewport-container {
-    height: 100vh;
+  @media (min-height: 620px) {
+    .viewport-container {
+      height: 100vh;
+      padding: 0;
+    }
   }
 
   a svg:hover {
