@@ -12,11 +12,14 @@ class ProjectCard extends HTMLElement {
     this.innerHTML = `
       <button class='card' id=${name}>
         <div class='title-wrapper'>
+          <div class='emoji'>${emoji}</div>
           <h3 class='card-title'>
-            <span>${title}</span>
+            <div>${title}</div>
             <div class='icon-container'>
-              <span>${emoji}</span>
-              <span class='close-button'><i class="gg-close"></i><div class='close-button-overlay'></div></span>
+              <span class='close-button'>
+                <i class="gg-close"></i>
+                <div class='close-button-overlay'></div>
+              </span>
             </div>
           </h3>
         </div>

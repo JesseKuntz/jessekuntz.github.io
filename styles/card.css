@@ -51,9 +51,33 @@ project-card::after {
 }
 
 .title-wrapper {
-  border-bottom: 2px solid var(--light-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--light-color);
   color: var(--dark-color);
+}
+
+.emoji {
+  font-size: 50px;
+  margin-bottom: 12px;
+}
+
+.card.active .title-wrapper {
+  position: relative;
+  display: block;
+  border-bottom: 2px solid var(--light-color);
+  background-color: var(--light-color);
+}
+
+.card.active .emoji {
+  display: none;
 }
 
 .card-title {
@@ -90,14 +114,6 @@ project-card::after {
 
 .project-image.circle {
   border-radius: 100%;
-}
-
-.fade {
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  background: linear-gradient(rgba(255,255,255,0), var(--fade-light-color));
-  top: 203px;
 }
 
 .active {
