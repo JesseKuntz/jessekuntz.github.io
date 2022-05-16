@@ -67,7 +67,7 @@ body {
 }
 
 project-card {
-  margin: 12px 12px 0 0;
+  padding: 6px;
   width: var(--card-width);
   height: var(--card-height);
   position: relative;
@@ -96,10 +96,10 @@ project-card::after {
 
 .card {
   cursor: pointer;
-  border: 4px solid var(--light-color);
+  background: linear-gradient(to right, var(--coral-color), var(--orange-color)) border-box;
+  border: 4px solid transparent;
   border-radius: 4px;
   outline: none;
-  background-color: var(--dark-color);
   color: var(--light-color);
   width: var(--card-width);
   height: var(--card-height);
@@ -116,6 +116,8 @@ project-card::after {
 
 .card.active {
   cursor: default;
+  border: 4px solid var(--light-color);
+  background: var(--dark-color);
 }
 
 .title-wrapper {
@@ -150,12 +152,16 @@ project-card::after {
 }
 
 .card-title {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   margin: 2px 8px 0;
   height: 30px;
+}
+
+.card.active .card-title {
+  font-size: 22px;
 }
 
 .content {
@@ -201,7 +207,7 @@ project-card::after {
   width: 100%;
   height: 100%;
   overflow: auto;
-  margin: 0;
+  padding: 0;
 }
 
 .modal .overlay {
@@ -234,13 +240,14 @@ project-card::after {
   color: #FFF;
   padding: 4px;
   border-radius: 4px;
-  margin: 0 0 3px 12px;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .close-button:hover {
-  box-shadow: none;
+  opacity: 0.8;
 }
 
 .close-button-overlay {
@@ -256,7 +263,7 @@ project-card::after {
   height: var(--card-height);
   background-color: var(--light-color);
   border-radius: 4px;
-  margin: 12px 12px 0 0;
+  padding: 6px;
 }
 
 .gg-close {
@@ -458,12 +465,19 @@ h2 {
     margin: 0 0 20px;
   }
 
+  project-card:first-child {
+    padding-left: 0;
+  }
+
+  project-card:last-child {
+    padding-right: 0;
+  }
+
   .projects {
     flex-wrap: nowrap;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    padding-bottom: 100px;
-    padding-left: 20px;
+    padding: 0 20px 100px;
   }
 
   .card {
