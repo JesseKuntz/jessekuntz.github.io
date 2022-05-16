@@ -1,5 +1,5 @@
 project-card {
-  margin: 12px 12px 0 0;
+  padding: 6px;
   width: var(--card-width);
   height: var(--card-height);
   position: relative;
@@ -28,10 +28,10 @@ project-card::after {
 
 .card {
   cursor: pointer;
-  border: 4px solid var(--light-color);
+  background: linear-gradient(to right, var(--coral-color), var(--orange-color)) border-box;
+  border: 4px solid transparent;
   border-radius: 4px;
   outline: none;
-  background-color: var(--dark-color);
   color: var(--light-color);
   width: var(--card-width);
   height: var(--card-height);
@@ -48,6 +48,8 @@ project-card::after {
 
 .card.active {
   cursor: default;
+  border: 4px solid var(--light-color);
+  background: var(--dark-color);
 }
 
 .title-wrapper {
@@ -137,7 +139,7 @@ project-card::after {
   width: 100%;
   height: 100%;
   overflow: auto;
-  margin: 0;
+  padding: 0;
 }
 
 .modal .overlay {
@@ -193,7 +195,7 @@ project-card::after {
   height: var(--card-height);
   background-color: var(--light-color);
   border-radius: 4px;
-  margin: 12px 12px 0 0;
+  padding: 6px;
 }
 
 .gg-close {

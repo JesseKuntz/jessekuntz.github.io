@@ -38,12 +38,19 @@
     margin: 0 0 20px;
   }
 
+  project-card:first-child {
+    padding-left: 0;
+  }
+
+  project-card:last-child {
+    padding-right: 0;
+  }
+
   .projects {
     flex-wrap: nowrap;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    padding-bottom: 100px;
-    padding-left: 20px;
+    padding: 0 20px 100px;
   }
 
   .card {
