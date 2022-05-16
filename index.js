@@ -150,7 +150,7 @@ cards.forEach(card => {
   card.addEventListener('click', event => {
     if (
       card.classList.value.includes('active') &&
-      event.target.classList.value !== 'close-button'
+      event.target.classList.value !== 'close-button-overlay'
     ) {
       return;
     }

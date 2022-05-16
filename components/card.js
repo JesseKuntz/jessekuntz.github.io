@@ -16,7 +16,7 @@ class ProjectCard extends HTMLElement {
             <span>${title}</span>
             <div class='icon-container'>
               <span>${emoji}</span>
-              <span class='close-button'>X</span>
+              <span class='close-button'><i class="gg-close"></i><div class='close-button-overlay'></div></span>
             </div>
           </h3>
         </div>
