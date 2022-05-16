@@ -15,14 +15,12 @@ class ProjectCard extends HTMLElement {
           <div class='emoji'>${emoji}</div>
           <h3 class='card-title'>
             <div>${title}</div>
-            <div class='icon-container'>
-              <span class='close-button'>
-                <i class="gg-close"></i>
-                <div class='close-button-overlay'></div>
-              </span>
-            </div>
           </h3>
         </div>
+        <span class='close-button'>
+          <i class="gg-close"></i>
+          <div class='close-button-overlay'></div>
+        </span>
         <div class='content'>
           ${content}
         </div>
