@@ -415,6 +415,7 @@ h2 {
   padding: 0 20px;
   border-radius: 4px;
   background: var(--light-color);
+  background: linear-gradient(to top, var(--coral-color) 36%, var(--orange-color));
 }
 
 .about-card:not(:last-child) {
