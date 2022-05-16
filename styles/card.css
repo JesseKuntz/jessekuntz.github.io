@@ -72,6 +72,7 @@ project-card::after {
 .card.active .title-wrapper {
   position: relative;
   display: block;
+  height: auto;
   border-bottom: 2px solid var(--light-color);
   background-color: var(--light-color);
 }

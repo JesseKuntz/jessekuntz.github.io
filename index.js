@@ -24,12 +24,10 @@ const projectPlaceholder = document.createElement('div');
 projectPlaceholder.classList.add('placeholder');
 
 function addFade(card) {
-  if (card.scrollHeight > card.offsetHeight) {
-    const fade = document.createElement('div');
-    fade.classList.add('fade');
+  const fade = document.createElement('div');
+  fade.classList.add('fade');
 
-    card.appendChild(fade);
-  }
+  card.appendChild(fade);
 }
 
 function resetCards(currentCard, fade) {
@@ -117,10 +115,8 @@ cards.forEach(card => {
 
     // If the card is now closed
     if (!card.classList.value.includes('active')) {
-      if (fade) {
-        card.style.height = cardHeight;
-        fade.style.display = 'block';
-      }
+      card.style.height = cardHeight;
+      fade.style.display = 'block';
 
       params.delete('project');
 
@@ -128,10 +124,8 @@ cards.forEach(card => {
     }
     // If the card is now open
     else {
-      if (fade) {
-        card.style.height = 'fit-content';
-        fade.style.display = 'none';
-      }
+      card.style.height = 'fit-content';
+      fade.style.display = 'none';
 
       params.set('project', card.id);
 
