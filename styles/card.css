@@ -28,8 +28,8 @@ project-card::after {
 
 .card {
   cursor: pointer;
-  background: linear-gradient(to right, var(--coral-color), var(--orange-color)) border-box;
-  border: 4px solid transparent;
+  background: linear-gradient(to right, var(--color-coral), var(--color-orange)) border-box;
+  border: 12px solid transparent;
   border-radius: 4px;
   outline: none;
   color: var(--light-color);
@@ -88,12 +88,13 @@ project-card::after {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  margin: 2px 8px 0;
+  margin: 2px 12px 0;
   height: 30px;
 }
 
 .card.active .card-title {
   font-size: 22px;
+  margin: 2px 4px 0;
 }
 
 .content {
@@ -153,7 +154,7 @@ project-card::after {
 }
 
 .modal-open {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .icon-container {
@@ -168,7 +169,7 @@ project-card::after {
 .close-button {
   display: none;
   position: relative;
-  background: var(--coral-color);
+  background: var(--color-coral);
   color: #FFF;
   padding: 4px;
   border-radius: 4px;

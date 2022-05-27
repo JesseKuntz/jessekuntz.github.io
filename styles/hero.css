@@ -17,7 +17,7 @@
 }
 
 .hero-circle {
-  background-image: linear-gradient(var(--coral-color), var(--orange-color));
+  background-image: linear-gradient(var(--color-coral), var(--color-orange));
   padding: 1px;
   width: 310px;
   height: 310px;

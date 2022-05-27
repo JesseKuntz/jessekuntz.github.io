@@ -18,7 +18,7 @@
   }
 
   .hero-circle {
-    background-image: linear-gradient(var(--coral-color), var(--orange-color));
+    background-image: linear-gradient(var(--color-coral), var(--color-orange));
     width: 240px;
     height: 240px;
   }
@@ -39,18 +39,18 @@
   }
 
   project-card:first-child {
-    padding-left: 0;
+    padding-left: 20px;
   }
 
   project-card:last-child {
-    padding-right: 0;
+    padding-right: 20px;
   }
 
   .projects {
     flex-wrap: nowrap;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    padding: 0 20px 100px;
+    padding-bottom: 100px;
   }
 
   .card {

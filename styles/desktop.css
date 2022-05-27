@@ -26,19 +26,6 @@
     100% {transform: rotate(5deg);}
   }
 
-  .card:hover:not(.active) {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-  }
-
-  .card:hover:not(.active) a {
-    color: var(--link-dark-color);
-  }
-
-  .card:hover:not(.active) a:visited {
-    color: var(--link-visited-dark-color);
-  }
-
   .card:hover:not(.active) .title-wrapper {
     background-color: var(--dark-color);
     color: var(--light-color);

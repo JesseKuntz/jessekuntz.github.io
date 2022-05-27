@@ -3,11 +3,11 @@
 }
 
 a {
-  color: var(--link-light-color);
+  color: var(--light-color);
 }
 
 a:visited {
-  color: var(--link-visited-light-color);
+  color: var(--light-color);
 }
 
 li {

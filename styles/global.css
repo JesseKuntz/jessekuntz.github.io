@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 
 :root {
-  --dark-color: #1d262f;
-  --light-color: #F9E0A7;
+  --color-blue: #1D262F;
+  --color-sand: #F9E0A7;
+  --color-coral: #FF5370;
+  --color-orange: #FFA500;
+  --color-sea: #76B6C4;
+  --color-light-blue: #DEF3F6;
+  --dark-color: var(--color-blue);
+  --light-color: var(--color-sand);
   --dark-mode-cat: url(../assets/dark-mode/sand-cat.svg);
   --light-mode-cat: url(../assets/dark-mode/ocean-cat.svg);
-  --link-dark-color: #1d262f;
-  --link-visited-dark-color: #1d262f;
-  --link-light-color: #F9E0A7;
-  --link-visited-light-color: #F9E0A7;
-  --fade-light-color: #50BAA9;
-  --fade-dark-color: #50BAA9;
-  --coral-color: #FF5370;
-  --orange-color: #FFA500;
   --card-height: 280px;
   --card-width: 280px;
 }

@@ -1,7 +1,7 @@
 .about {
   font-size: 20px;
   display: flex;
-  color: var(--dark-color);
+  color: var(--color-blue);
   height: 220px;
 }
 
@@ -14,8 +14,7 @@
   height: 100%;
   padding: 0 20px;
   border-radius: 4px;
-  background: var(--light-color);
-  background: linear-gradient(to top, var(--coral-color) 36%, var(--orange-color));
+  background: linear-gradient(to bottom, var(--color-light-blue), var(--color-sea));
 }
 
 .about-card:not(:last-child) {
