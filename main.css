@@ -1,17 +1,15 @@
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap);
 :root {
-  --dark-color: #1d262f;
-  --light-color: #F9E0A7;
+  --color-blue: #1D262F;
+  --color-sand: #F9E0A7;
+  --color-coral: #FF5370;
+  --color-orange: #FFA500;
+  --color-sea: #76B6C4;
+  --color-light-blue: #DEF3F6;
+  --dark-color: var(--color-blue);
+  --light-color: var(--color-sand);
   --dark-mode-cat: url(sand-cat.svg);
   --light-mode-cat: url(ocean-cat.svg);
-  --link-dark-color: #1d262f;
-  --link-visited-dark-color: #1d262f;
-  --link-light-color: #F9E0A7;
-  --link-visited-light-color: #F9E0A7;
-  --fade-light-color: #50BAA9;
-  --fade-dark-color: #50BAA9;
-  --coral-color: #FF5370;
-  --orange-color: #FFA500;
   --card-height: 280px;
   --card-width: 280px;
 }
@@ -45,7 +43,7 @@ body {
 }
 
 .hero-circle {
-  background-image: linear-gradient(var(--coral-color), var(--orange-color));
+  background-image: linear-gradient(var(--color-coral), var(--color-orange));
   padding: 1px;
   width: 310px;
   height: 310px;
@@ -96,8 +94,8 @@ project-card::after {
 
 .card {
   cursor: pointer;
-  background: linear-gradient(to right, var(--coral-color), var(--orange-color)) border-box;
-  border: 4px solid transparent;
+  background: linear-gradient(to right, var(--color-coral), var(--color-orange)) border-box;
+  border: 12px solid transparent;
   border-radius: 4px;
   outline: none;
   color: var(--light-color);
@@ -156,12 +154,13 @@ project-card::after {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  margin: 2px 8px 0;
+  margin: 2px 12px 0;
   height: 30px;
 }
 
 .card.active .card-title {
   font-size: 22px;
+  margin: 2px 4px 0;
 }
 
 .content {
@@ -221,7 +220,7 @@ project-card::after {
 }
 
 .modal-open {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .icon-container {
@@ -236,7 +235,7 @@ project-card::after {
 .close-button {
   display: none;
   position: relative;
-  background: var(--coral-color);
+  background: var(--color-coral);
   color: #FFF;
   padding: 4px;
   border-radius: 4px;
@@ -349,11 +348,11 @@ a svg {
 }
 
 a {
-  color: var(--link-light-color);
+  color: var(--light-color);
 }
 
 a:visited {
-  color: var(--link-visited-light-color);
+  color: var(--light-color);
 }
 
 li {
@@ -401,7 +400,7 @@ h2 {
 .about {
   font-size: 20px;
   display: flex;
-  color: var(--dark-color);
+  color: var(--color-blue);
   height: 220px;
 }
 
@@ -414,8 +413,7 @@ h2 {
   height: 100%;
   padding: 0 20px;
   border-radius: 4px;
-  background: var(--light-color);
-  background: linear-gradient(to top, var(--coral-color) 36%, var(--orange-color));
+  background: linear-gradient(to bottom, var(--color-light-blue), var(--color-sea));
 }
 
 .about-card:not(:last-child) {
@@ -446,7 +444,7 @@ h2 {
   }
 
   .hero-circle {
-    background-image: linear-gradient(var(--coral-color), var(--orange-color));
+    background-image: linear-gradient(var(--color-coral), var(--color-orange));
     width: 240px;
     height: 240px;
   }
@@ -467,18 +465,18 @@ h2 {
   }
 
   project-card:first-child {
-    padding-left: 0;
+    padding-left: 20px;
   }
 
   project-card:last-child {
-    padding-right: 0;
+    padding-right: 20px;
   }
 
   .projects {
     flex-wrap: nowrap;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    padding: 0 20px 100px;
+    padding-bottom: 100px;
   }
 
   .card {
@@ -527,19 +525,6 @@ h2 {
     50% {transform: rotate(5deg);}
     75% {transform: rotate(-5deg);}
     100% {transform: rotate(5deg);}
-  }
-
-  .card:hover:not(.active) {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-  }
-
-  .card:hover:not(.active) a {
-    color: var(--link-dark-color);
-  }
-
-  .card:hover:not(.active) a:visited {
-    color: var(--link-visited-dark-color);
   }
 
   .card:hover:not(.active) .title-wrapper {
