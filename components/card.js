@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
 class ProjectCard extends HTMLElement {
   constructor() {
     super();
 
-    const title = this.getAttribute('title');
-    const emoji = this.getAttribute('emoji');
-    const name = this.getAttribute('name');
+    const title = this.getAttribute("title");
+    const emoji = this.getAttribute("emoji");
+    const name = this.getAttribute("name");
     const content = this.innerHTML;
 
     this.innerHTML = `
@@ -28,8 +28,8 @@ class ProjectCard extends HTMLElement {
       <div class='overlay'></div>
     `;
 
-    this.className = 'no-after';
+    this.className = "no-after";
   }
 }
 
-window.customElements.define('project-card', ProjectCard);
+window.customElements.define("project-card", ProjectCard);

@@ -127,8 +127,8 @@ project-card::after {
 
 .active {
   margin: 20px auto;
-  width: 50%;
-  max-width: 680px;
+  width: 60%;
+  max-width: 900px;
   z-index: 3;
   position: sticky;
 }

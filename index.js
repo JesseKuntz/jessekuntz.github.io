@@ -1,45 +1,45 @@
-'use strict';
+"use strict";
 
 // Components
-require('./components/card');
+require("./components/card");
 
 // Styles
-require('./styles/index.css');
+require("./styles/index.css");
 
 // Sounds
 const sounds = [
-  require('./assets/dark-mode/meow0.mp3'),
-  require('./assets/dark-mode/meow1.mp3'),
-  require('./assets/dark-mode/meow2.mp3'),
+  require("./assets/dark-mode/meow0.mp3"),
+  require("./assets/dark-mode/meow1.mp3"),
+  require("./assets/dark-mode/meow2.mp3"),
 ];
 
-const cards = [...document.getElementsByClassName('card')];
-const cat = document.querySelector('.cat');
+const cards = [...document.getElementsByClassName("card")];
+const cat = document.querySelector(".cat");
 
 const root = document.documentElement;
 const rootStyles = getComputedStyle(root);
-const cardHeight = rootStyles.getPropertyValue('--card-height');
+const cardHeight = rootStyles.getPropertyValue("--card-height");
 
-const projectPlaceholder = document.createElement('div');
-projectPlaceholder.classList.add('placeholder');
+const projectPlaceholder = document.createElement("div");
+projectPlaceholder.classList.add("placeholder");
 
 function addFade(card) {
-  const fade = document.createElement('div');
-  fade.classList.add('fade');
+  const fade = document.createElement("div");
+  fade.classList.add("fade");
 
   card.appendChild(fade);
 }
 
 function resetCards(currentCard, fade) {
   const otherCards = cards.filter(
-    card =>
-      card !== currentCard && (fade || card.classList.value.includes('active'))
+    (card) =>
+      card !== currentCard && (fade || card.classList.value.includes("active"))
   );
 
-  otherCards.forEach(otherCard => {
-    otherCard.classList.remove('active');
+  otherCards.forEach((otherCard) => {
+    otherCard.classList.remove("active");
     otherCard.style.height = cardHeight;
-    otherCard.lastElementChild.style.display = 'block';
+    otherCard.lastElementChild.style.display = "block";
   });
 }
 
@@ -55,20 +55,20 @@ function meow() {
 
 function openProject() {
   const params = new URL(document.location).searchParams;
-  const project = params.get('project');
+  const project = params.get("project");
   const card = document.querySelector(`#${project}`);
 
   if (card) {
     card.click();
 
     const { left, top } = card.getBoundingClientRect();
-    document.querySelector('.projects').scrollTo(left, 0);
+    document.querySelector(".projects").scrollTo(left, 0);
     window.scrollTo(0, top);
   }
 }
 
 function updateProjectParam(params) {
-  window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
+  window.history.replaceState({}, "", `${window.location.pathname}?${params}`);
 }
 
 function setCardWidth(percentage) {
@@ -77,7 +77,7 @@ function setCardWidth(percentage) {
   if (windowWidth <= 600) {
     const newSize = percentage * windowWidth;
 
-    root.style.setProperty('--card-width', `${newSize}px`);
+    root.style.setProperty("--card-width", `${newSize}px`);
   }
 }
 
@@ -89,7 +89,7 @@ async function setDownloadCount() {
   );
   const { downloads } = await response.json();
 
-  const downloadCountElement = document.querySelector('.download-count');
+  const downloadCountElement = document.querySelector(".download-count");
 
   downloadCountElement.innerHTML = downloads;
 }
@@ -98,53 +98,53 @@ async function setDownloadCount() {
 
 new window.LazyLoad();
 
-cards.forEach(card => {
+cards.forEach((card) => {
   addFade(card);
 
-  const fade = card.querySelector('.fade');
+  const fade = card.querySelector(".fade");
   const overlay = card.nextElementSibling;
 
   const toggleModal = () => {
     resetCards(card, fade);
 
-    card.classList.toggle('active');
-    card.parentElement.classList.toggle('modal');
-    document.body.classList.toggle('modal-open');
+    card.classList.toggle("active");
+    card.parentElement.classList.toggle("modal");
+    document.body.classList.toggle("modal-open");
 
     const params = new URL(document.location).searchParams;
 
     // If the card is now closed
-    if (!card.classList.value.includes('active')) {
+    if (!card.classList.value.includes("active")) {
       card.style.height = cardHeight;
-      fade.style.display = 'block';
+      fade.style.display = "block";
 
-      params.delete('project');
+      params.delete("project");
 
       projectPlaceholder.remove();
     }
     // If the card is now open
     else {
-      card.style.height = 'fit-content';
-      fade.style.display = 'none';
+      card.style.height = "fit-content";
+      fade.style.display = "none";
 
-      params.set('project', card.id);
+      params.set("project", card.id);
 
       document
-        .querySelector('.projects')
+        .querySelector(".projects")
         .insertBefore(projectPlaceholder, card.parentNode);
     }
 
     updateProjectParam(params);
   };
 
-  overlay.addEventListener('click', () => {
+  overlay.addEventListener("click", () => {
     toggleModal();
   });
 
-  card.addEventListener('click', event => {
+  card.addEventListener("click", (event) => {
     if (
-      card.classList.value.includes('active') &&
-      event.target.classList.value !== 'close-button-overlay'
+      card.classList.value.includes("active") &&
+      event.target.classList.value !== "close-button-overlay"
     ) {
       return;
     }
@@ -156,18 +156,18 @@ cards.forEach(card => {
 openProject();
 setCardWidth(0.87);
 
-cat.addEventListener('click', () => {
+cat.addEventListener("click", () => {
   meow();
 
-  const darkColor = rootStyles.getPropertyValue('--dark-color');
-  const lightColor = rootStyles.getPropertyValue('--light-color');
-  const darkModeImage = rootStyles.getPropertyValue('--dark-mode-cat');
-  const lightModeImage = rootStyles.getPropertyValue('--light-mode-cat');
+  const darkColor = rootStyles.getPropertyValue("--dark-color");
+  const lightColor = rootStyles.getPropertyValue("--light-color");
+  const darkModeImage = rootStyles.getPropertyValue("--dark-mode-cat");
+  const lightModeImage = rootStyles.getPropertyValue("--light-mode-cat");
 
-  root.style.setProperty('--dark-color', lightColor);
-  root.style.setProperty('--light-color', darkColor);
-  root.style.setProperty('--dark-mode-cat', lightModeImage);
-  root.style.setProperty('--light-mode-cat', darkModeImage);
+  root.style.setProperty("--dark-color", lightColor);
+  root.style.setProperty("--light-color", darkColor);
+  root.style.setProperty("--dark-mode-cat", lightModeImage);
+  root.style.setProperty("--light-mode-cat", darkModeImage);
 });
 
 setDownloadCount();
