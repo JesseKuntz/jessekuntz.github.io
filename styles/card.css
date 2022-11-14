@@ -196,7 +196,7 @@ project-card::after {
   height: var(--card-height);
   background-color: var(--light-color);
   border-radius: 4px;
-  padding: 6px;
+  margin: 6px;
 }
 
 .gg-close {
