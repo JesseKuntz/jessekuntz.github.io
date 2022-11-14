@@ -48,6 +48,8 @@ h2 {
   right: 20px;
 }
 
-.cat, .contact-icon, .card {
+.cat,
+.contact-icon,
+.card {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

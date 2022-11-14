@@ -7,7 +7,7 @@ project-card {
 }
 
 project-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -28,7 +28,8 @@ project-card::after {
 
 .card {
   cursor: pointer;
-  background: linear-gradient(to right, var(--color-coral), var(--color-orange)) border-box;
+  background: linear-gradient(to right, var(--color-coral), var(--color-orange))
+    border-box;
   border: 12px solid transparent;
   border-radius: 4px;
   outline: none;
@@ -40,10 +41,10 @@ project-card::after {
   align-items: stretch;
   padding: 0;
   overflow-y: hidden;
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 200;
   position: relative;
-  box-shadow: 0 10px 5px -5px rgba(0,0,0,0.75);
+  box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.75);
 }
 
 .card.active {
@@ -170,7 +171,7 @@ project-card::after {
   display: none;
   position: relative;
   background: var(--color-coral);
-  color: #FFF;
+  color: #fff;
   padding: 4px;
   border-radius: 4px;
   cursor: pointer;
@@ -207,7 +208,7 @@ project-card::after {
   width: 22px;
   height: 22px;
   border: 2px solid transparent;
-  border-radius: 40px
+  border-radius: 40px;
 }
 
 .gg-close::after,
@@ -222,9 +223,9 @@ project-card::after {
   transform: rotate(45deg);
   border-radius: 5px;
   top: 8px;
-  left: 1px
+  left: 1px;
 }
 
 .gg-close::after {
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
 }

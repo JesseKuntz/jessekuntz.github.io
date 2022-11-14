@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap");
 
 :root {
-  --color-blue: #1D262F;
-  --color-sand: #F9E0A7;
-  --color-coral: #FF5370;
-  --color-orange: #FFA500;
-  --color-sea: #76B6C4;
-  --color-light-blue: #DEF3F6;
+  --color-blue: #1d262f;
+  --color-sand: #f9e0a7;
+  --color-coral: #ff5370;
+  --color-orange: #ffa500;
+  --color-sea: #76b6c4;
+  --color-light-blue: #def3f6;
   --dark-color: var(--color-blue);
   --light-color: var(--color-sand);
   --dark-mode-cat: url(../assets/dark-mode/sand-cat.svg);
@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   margin: 0;
   padding: 0;
   font-weight: 200;
