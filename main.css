@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap);
 :root {
-  --color-blue: #1D262F;
-  --color-sand: #F9E0A7;
-  --color-coral: #FF5370;
-  --color-orange: #FFA500;
-  --color-sea: #76B6C4;
-  --color-light-blue: #DEF3F6;
+  --color-blue: #1d262f;
+  --color-sand: #f9e0a7;
+  --color-coral: #ff5370;
+  --color-orange: #ffa500;
+  --color-sea: #76b6c4;
+  --color-light-blue: #def3f6;
   --dark-color: var(--color-blue);
   --light-color: var(--color-sand);
   --dark-mode-cat: url(sand-cat.svg);
@@ -15,13 +15,18 @@
 }
 
 body {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   margin: 0;
   padding: 0;
   font-weight: 200;
   background-color: var(--dark-color);
   color: var(--light-color);
   max-width: 1008px;
+}
+
+code {
+  border: 1px solid var(--color-sea);
+  border-radius: 4px;
 }
 
 .hero-image-container {
@@ -57,11 +62,21 @@ body {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(90deg); }
-  50% { transform: rotate(180deg); }
-  75% { transform: rotate(270deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 project-card {
@@ -73,7 +88,7 @@ project-card {
 }
 
 project-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -94,7 +109,8 @@ project-card::after {
 
 .card {
   cursor: pointer;
-  background: linear-gradient(to right, var(--color-coral), var(--color-orange)) border-box;
+  background: linear-gradient(to right, var(--color-coral), var(--color-orange))
+    border-box;
   border: 12px solid transparent;
   border-radius: 4px;
   outline: none;
@@ -106,10 +122,10 @@ project-card::after {
   align-items: stretch;
   padding: 0;
   overflow-y: hidden;
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 200;
   position: relative;
-  box-shadow: 0 10px 5px -5px rgba(0,0,0,0.75);
+  box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.75);
 }
 
 .card.active {
@@ -192,10 +208,11 @@ project-card::after {
 
 .active {
   margin: 20px auto;
-  width: 50%;
-  max-width: 680px;
+  width: 60%;
+  max-width: 900px;
   z-index: 3;
   position: sticky;
+  user-select: text;
 }
 
 .modal {
@@ -236,7 +253,7 @@ project-card::after {
   display: none;
   position: relative;
   background: var(--color-coral);
-  color: #FFF;
+  color: #fff;
   padding: 4px;
   border-radius: 4px;
   cursor: pointer;
@@ -262,7 +279,7 @@ project-card::after {
   height: var(--card-height);
   background-color: var(--light-color);
   border-radius: 4px;
-  padding: 6px;
+  margin: 6px;
 }
 
 .gg-close {
@@ -273,7 +290,7 @@ project-card::after {
   width: 22px;
   height: 22px;
   border: 2px solid transparent;
-  border-radius: 40px
+  border-radius: 40px;
 }
 
 .gg-close::after,
@@ -288,11 +305,11 @@ project-card::after {
   transform: rotate(45deg);
   border-radius: 5px;
   top: 8px;
-  left: 1px
+  left: 1px;
 }
 
 .gg-close::after {
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
 }
 
 .contact {
@@ -341,6 +358,31 @@ a svg {
 .download-count {
   display: inline-block;
   margin-left: 4px;
+}
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.badge-list > li {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 2px 6px;
+}
+
+.badge-list > li:first-child {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 2px 6px;
 }
 
 .viewport-container {
@@ -393,7 +435,9 @@ h2 {
   right: 20px;
 }
 
-.cat, .contact-icon, .card {
+.cat,
+.contact-icon,
+.card {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -413,7 +457,11 @@ h2 {
   height: 100%;
   padding: 0 20px;
   border-radius: 4px;
-  background: linear-gradient(to bottom, var(--color-light-blue), var(--color-sea));
+  background: linear-gradient(
+    to bottom,
+    var(--color-light-blue),
+    var(--color-sea)
+  );
 }
 
 .about-card:not(:last-child) {
@@ -520,11 +568,21 @@ h2 {
   }
 
   @keyframes wiggle {
-    0% {transform: rotate(5deg);}
-    25% {transform: rotate(-5deg);}
-    50% {transform: rotate(5deg);}
-    75% {transform: rotate(-5deg);}
-    100% {transform: rotate(5deg);}
+    0% {
+      transform: rotate(5deg);
+    }
+    25% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(5deg);
+    }
   }
 
   .card:hover:not(.active) .title-wrapper {
