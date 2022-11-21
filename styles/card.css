@@ -131,6 +131,7 @@ project-card::after {
   max-width: 900px;
   z-index: 3;
   position: sticky;
+  user-select: text;
 }
 
 .modal {

@@ -32,3 +32,28 @@
   display: inline-block;
   margin-left: 4px;
 }
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.badge-list > li {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 2px 6px;
+}
+
+.badge-list > li:first-child {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 2px 6px;
+}
