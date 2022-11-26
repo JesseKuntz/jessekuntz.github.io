@@ -31,7 +31,6 @@
 
   .about-card {
     width: auto;
-    padding: 20px;
   }
 
   .about-card:not(:last-child) {
