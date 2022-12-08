@@ -445,17 +445,12 @@ h2 {
   font-size: 20px;
   display: flex;
   color: var(--color-blue);
-  height: 220px;
 }
 
 .about-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   width: 33.33%;
-  height: 100%;
-  padding: 0 20px;
+  padding: 20px;
   border-radius: 4px;
   background: linear-gradient(
     to bottom,
@@ -468,8 +463,20 @@ h2 {
   margin: 0 20px 0 0;
 }
 
-.about-card > div > a {
-  color: var(--dark-color);
+.about-card a {
+  color: var(--color-blue);
+}
+
+.about-card-title {
+  font-weight: bold;
+  background: linear-gradient(
+    var(--color-coral),
+    var(--color-sand) 20% 80%,
+    var(--color-coral)
+  );
+  border-radius: 4px;
+  padding: 4px;
+  margin-bottom: 8px;
 }
 
 @media only screen and (max-width: 830px) {
@@ -505,7 +512,6 @@ h2 {
 
   .about-card {
     width: auto;
-    padding: 20px;
   }
 
   .about-card:not(:last-child) {
