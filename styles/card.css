@@ -68,8 +68,7 @@ project-card::after {
 }
 
 .emoji {
-  font-size: 50px;
-  margin-bottom: 12px;
+  font-size: 70px;
 }
 
 .card.active .title-wrapper {
