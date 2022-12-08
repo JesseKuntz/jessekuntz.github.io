@@ -73,14 +73,16 @@ project-card::after {
 
 .card.active .title-wrapper {
   position: relative;
-  display: block;
   height: auto;
   border-bottom: 2px solid var(--light-color);
   background-color: var(--light-color);
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .card.active .emoji {
-  display: none;
+  font-size: 22px;
+  margin-right: 2px;
 }
 
 .card-title {
