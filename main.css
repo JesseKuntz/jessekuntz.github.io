@@ -134,6 +134,10 @@ project-card::after {
   background: var(--dark-color);
 }
 
+.card:not(.active):focus {
+  background: var(--color-sea);
+}
+
 .title-wrapper {
   position: absolute;
   top: 0;
@@ -185,6 +189,11 @@ project-card::after {
   font-size: 18px;
   margin: 0 8px;
   line-height: 1.4;
+  display: none;
+}
+
+.card.active .content {
+  display: block;
 }
 
 .project-image {
