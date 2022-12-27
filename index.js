@@ -1,12 +1,9 @@
 "use strict";
 
-// Components
 require("./components/card");
 
-// Styles
 require("./styles/index.css");
 
-// Sounds
 const sounds = [
   require("./assets/dark-mode/meow0.mp3"),
   require("./assets/dark-mode/meow1.mp3"),
@@ -113,7 +110,7 @@ cards.forEach((card) => {
 
     const params = new URL(document.location).searchParams;
 
-    // If the card is now closed
+    // If the card is closing
     if (!card.classList.value.includes("active")) {
       card.style.height = cardHeight;
       fade.style.display = "block";
@@ -122,7 +119,7 @@ cards.forEach((card) => {
 
       projectPlaceholder.remove();
     }
-    // If the card is now open
+    // If the card is opening
     else {
       card.style.height = "fit-content";
       fade.style.display = "none";
@@ -149,8 +146,24 @@ cards.forEach((card) => {
       return;
     }
 
+    // Close the currently open card
+    const activeCard = cards.find((card) =>
+      card.classList.value.includes("active")
+    );
+    if (activeCard) {
+      activeCard.querySelector(".close-button-overlay").click();
+    }
+
     toggleModal();
   });
+
+  window.addEventListener(
+    "keyup",
+    (event) =>
+      card.classList.value.includes("active") &&
+      event.code === "Escape" &&
+      toggleModal()
+  );
 });
 
 openProject();
