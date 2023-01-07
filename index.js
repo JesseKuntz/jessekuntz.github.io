@@ -140,18 +140,10 @@ cards.forEach((card) => {
 
   card.addEventListener("click", (event) => {
     if (
-      card.classList.value.includes("active") &&
+      document.querySelector(".active") &&
       event.target.classList.value !== "close-button-overlay"
     ) {
       return;
-    }
-
-    // Close the currently open card
-    const activeCard = cards.find((card) =>
-      card.classList.value.includes("active")
-    );
-    if (activeCard) {
-      activeCard.querySelector(".close-button-overlay").click();
     }
 
     toggleModal();
