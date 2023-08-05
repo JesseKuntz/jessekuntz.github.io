@@ -3,24 +3,9 @@
     font-size: 60px;
   }
 
-  .hero-image-container {
-    width: 240px;
-    height: 240px;
-  }
-
-  .hero-image-container > picture {
-    height: 230px;
-  }
-
   .hero-image {
     width: 230px;
     height: 230px;
-  }
-
-  .hero-circle {
-    background-image: linear-gradient(var(--color-coral), var(--color-orange));
-    width: 240px;
-    height: 240px;
   }
 
   .about {

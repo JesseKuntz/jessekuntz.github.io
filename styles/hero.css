@@ -1,49 +1,6 @@
-.hero-image-container {
-  position: relative;
-  width: 310px;
-  height: 310px;
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image-container > picture {
-  height: 300px;
-}
-
 .hero-image {
+  margin-top: 40px;
   border-radius: 50%;
-}
-
-.hero-circle {
-  background-image: linear-gradient(var(--color-coral), var(--color-orange));
-  padding: 1px;
-  width: 310px;
-  height: 310px;
-  border-style: solid;
-  border-color: transparent;
-  border-radius: 50%;
-  border-width: 1px;
-  animation: spin 1s linear infinite;
-  position: absolute;
-  z-index: -1;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  height: 300px;
+  box-shadow: 0 0 20px 4px var(--color-coral);
 }
