@@ -13,7 +13,7 @@ class ProjectCard extends HTMLElement {
       <button class='card' id=${name}>
         <div class='title-wrapper'>
           <div class='emoji'>
-            <span class='iconify' data-icon='fluent-emoji:${emoji}'></span>
+            <iconify-icon icon="fluent-emoji:${emoji}"></iconify-icon>
           </div>
           <h3 class='card-title'>
             <div>${title}</div>
