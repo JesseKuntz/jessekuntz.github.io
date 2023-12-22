@@ -117,7 +117,7 @@
       </div>
       <div class="about-card">
         <div class="about-card-title">Professional Experience</div>
-        Web performance, SEO, affiliate marketing, and Web3.
+        Web performance, SEO, and Web3. Next.js and TypeScript.
       </div>
       <div class="about-card">
         <div class="about-card-title">Some Interests</div>
@@ -127,6 +127,58 @@
 
     <h2>Projects</h2>
     <div class="projects">
+      <!-- Boardalicious -->
+      <project-card title="Boardalicious" emoji="game-die" name="boardalicious">
+        <img
+          class="project-image inline lazy"
+          data-src="assets/projects/boardalicious-300w.png"
+          alt="Boardalicious Logo"
+          loading="lazy"
+          width="100"
+          height="100"
+        />
+
+        <ul class="badge-list">
+          <li>2023</li>
+          <li>Next.js</li>
+          <li>TypeScript</li>
+          <li>React Query</li>
+          <li>Tailwind CSS</li>
+          <li>Radix UI</li>
+        </ul>
+
+        <p>
+          Given a Board Game Geek username, the app picks a random game from
+          your collection, for when you can't decide what to play!
+        </p>
+
+        <p>
+          <a href="https://boardalicious.vercel.app/" target="_blank"
+            >Check it out!</a
+          >
+        </p>
+
+        <p>
+          For the most part, it's just an app that helps you pick a board game,
+          but there's also a "collection" page so that you had an easy way to
+          see all the games in your collection. In addition, you have the
+          ability to share games with others by opening them up and clicking the
+          share button, which will give you a URL like this:
+          <a
+            href="https://boardalicious.vercel.app/collection?username=bioshark9&game=122298"
+            target="_blank"
+            >https://boardalicious.vercel.app/collection?username=bioshark9&game=122298</a
+          >
+        </p>
+
+        <p>
+          Source code in the
+          <a href="https://github.com/JesseKuntz/boardalicious" target="_blank"
+            >Github repository</a
+          >.
+        </p>
+      </project-card>
+
       <!-- Shrekify -->
       <project-card title="Shrekify" emoji="avocado" name="shrekify">
         <img
@@ -918,8 +970,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.0/dist/lazyload.min.js"></script>
     <script
-      async
-      src="https://unpkg.com/emoji-sprinkle/dist/window.js"
+      defer
+      src="https://cdn.jsdelivr.net/npm/emoji-sprinkle@1.3.0/dist/window.js"
     ></script>
   </body>
 </html>
