@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= htmlWebpackPlugin.options.baseHeadContent %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta
+      name="description"
+      content="A price drop / wishlist tool for products on Chewy."
+    />
+  </head>
+
+  <body class="project-page">
+    <%= htmlWebpackPlugin.options.preBodyContent %>
+
+    <a class="home-link" href="/">Home</a>
+
+    <div class="header">
+      <div class="emoji">
+        <iconify-icon
+          icon="fluent-emoji:grinning-cat-with-smiling-eyes"
+        ></iconify-icon>
+      </div>
+      <h1><%= htmlWebpackPlugin.options.title %></h1>
+    </div>
+
+    <div class="content">
+      <ul class="badge-list">
+        <li>2020</li>
+        <li>JavaScript</li>
+        <li>Pipedream</li>
+      </ul>
+
+      <p>A price drop / wishlist tool for products on Chewy.</p>
+
+      <p>
+        Built using
+        <a href="https://pipedream.com/" target="_blank">Pipedream</a>. A script
+        pulls prices from Chewy's site triggered by a cron, and sends an email
+        containing the 'hot prices' (if the prices are below the thresholds that
+        have been set) as well as the rest of the prices.
+      </p>
+
+      <img
+        class="project-image lazy"
+        data-src="<%= require('../../assets/projects/chwishlist-400w.jpeg') %>"
+        alt="Chwishlist Email Screenshot"
+        loading="lazy"
+        width="300"
+        height="550"
+      />
+
+      <p>
+        More details are in the
+        <a
+          href="https://pipedream.com/@JesseKuntz/chwishlist-p_ZJCwep/readme"
+          target="_blank"
+          >Pipedream workflow</a
+        >, as well as some instructions on how to set one up for yourself.
+      </p>
+    </div>
+
+    <%= htmlWebpackPlugin.options.postBodyContent %>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= htmlWebpackPlugin.options.baseHeadContent %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta
+      name="description"
+      content="Given a Board Game Geek username, the app picks a random game from your collection, for when you can't decide what to play!"
+    />
+  </head>
+
+  <body class="project-page">
+    <%= htmlWebpackPlugin.options.preBodyContent %>
+
+    <a class="home-link" href="/">Home</a>
+
+    <div class="header">
+      <div class="emoji">
+        <iconify-icon icon="fluent-emoji:game-die"></iconify-icon>
+      </div>
+      <h1><%= htmlWebpackPlugin.options.title %></h1>
+    </div>
+
+    <div class="content">
+      <ul class="badge-list">
+        <li>2023</li>
+        <li>Next.js</li>
+        <li>TypeScript</li>
+        <li>React Query</li>
+        <li>Tailwind CSS</li>
+        <li>Radix UI</li>
+      </ul>
+
+      <p>
+        Given a Board Game Geek username, the app picks a random game from your
+        collection, for when you can't decide what to play!
+      </p>
+
+      <p>
+        <a href="https://boardalicious.vercel.app/" target="_blank"
+          >Check it out!</a
+        >
+      </p>
+
+      <p>
+        For the most part, it's just an app that helps you pick a board game,
+        but there's also a "collection" page so that you had an easy way to see
+        all the games in your collection. In addition, you have the ability to
+        share games with others by opening them up and clicking the share
+        button, which will give you a
+        <a
+          href="https://boardalicious.vercel.app/collection?username=bioshark9&game=122298"
+          target="_blank"
+          >sharable URL</a
+        >.
+      </p>
+
+      <p>
+        Source code in the
+        <a href="https://github.com/JesseKuntz/boardalicious" target="_blank"
+          >Github repository</a
+        >.
+      </p>
+    </div>
+
+    <%= htmlWebpackPlugin.options.postBodyContent %>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= htmlWebpackPlugin.options.baseHeadContent %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="A game of chess, powered by three.js." />
+  </head>
+
+  <body class="project-page">
+    <%= htmlWebpackPlugin.options.preBodyContent %>
+
+    <a class="home-link" href="/">Home</a>
+
+    <div class="header">
+      <div class="emoji">
+        <iconify-icon icon="fluent-emoji:chess-pawn"></iconify-icon>
+      </div>
+      <h1><%= htmlWebpackPlugin.options.title %></h1>
+    </div>
+
+    <div class="content">
+      <ul class="badge-list">
+        <li>2019</li>
+        <li>JavaScript</li>
+        <li>Blender</li>
+        <li>Three.js</li>
+        <li>Express</li>
+      </ul>
+
+      <p>
+        A game of chess, powered by three.js. Textures and animations done in
+        Blender. This was a class project, built with
+        <a href="https://github.com/rgadams" target="_blank">Roy Adams</a>.
+      </p>
+
+      <img
+        class="project-image lazy"
+        data-src="<%= require('../../assets/projects/chess-400w.png') %>"
+        alt="Chess Board"
+        loading="lazy"
+        width="300"
+        height="254"
+      />
+
+      <p>
+        Source code (and demo) in the
+        <a href="https://github.com/JesseKuntz/three-chess" target="_blank"
+          >Github repository</a
+        >.
+      </p>
+    </div>
+
+    <%= htmlWebpackPlugin.options.postBodyContent %>
+  </body>
+</html>

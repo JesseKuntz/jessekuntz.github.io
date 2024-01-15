@@ -7,10 +7,9 @@ class ProjectCard extends HTMLElement {
     const title = this.getAttribute("title");
     const emoji = this.getAttribute("emoji");
     const name = this.getAttribute("name");
-    const content = this.innerHTML;
 
     this.innerHTML = `
-      <button class='card' id=${name}>
+      <a class='card' href="${name}.html">
         <div class='title-wrapper'>
           <div class='emoji'>
             <iconify-icon icon="fluent-emoji:${emoji}"></iconify-icon>
@@ -19,18 +18,10 @@ class ProjectCard extends HTMLElement {
             <div>${title}</div>
           </h3>
         </div>
-        <span class='close-button'>
-          <i class='gg-close'></i>
-          <div class='close-button-overlay'></div>
-        </span>
-        <div class='content'>
-          ${content}
-        </div>
-      </button>
-      <div class='overlay'></div>
+      </a>
     `;
 
-    this.className = "no-after";
+    // this.className = "no-after";
   }
 }
 

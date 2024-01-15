@@ -1,29 +1,5 @@
 project-card {
-  padding: 6px;
-  width: var(--card-width);
-  height: var(--card-height);
-  position: relative;
-  overflow: hidden;
-}
-
-project-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--light-color);
-  border-radius: 4px;
-}
-
-.no-after::after {
-  display: none;
-}
-
-.no-after {
-  height: 100%;
-  overflow: initial;
+  margin: 6px;
 }
 
 .card {
@@ -34,8 +10,8 @@ project-card::after {
   border-radius: 4px;
   outline: none;
   color: var(--light-color);
-  width: var(--card-width);
-  height: var(--card-height);
+  width: 256px;
+  height: 256px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -47,46 +23,24 @@ project-card::after {
   box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.75);
 }
 
-.card.active {
-  cursor: default;
-  border: 4px solid var(--light-color);
-  background: var(--dark-color);
-}
-
-.card:not(.active):focus {
+.card:focus {
   background: var(--color-sea);
 }
 
 .title-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: var(--light-color);
   color: var(--dark-color);
 }
 
 .emoji {
   font-size: 70px;
-}
-
-.card.active .title-wrapper {
-  position: relative;
-  height: auto;
-  border-bottom: 2px solid var(--light-color);
-  background-color: var(--light-color);
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.card.active .emoji {
-  font-size: 22px;
-  margin-right: 2px;
 }
 
 .card-title {
@@ -96,147 +50,4 @@ project-card::after {
   justify-content: space-between;
   margin: 2px 12px 0;
   height: 30px;
-}
-
-.card.active .card-title {
-  font-size: 22px;
-  margin: 2px 4px 0;
-}
-
-.content {
-  text-align: left;
-  font-size: 18px;
-  margin: 0 8px;
-  line-height: 1.4;
-  display: none;
-}
-
-.card.active .content {
-  display: block;
-}
-
-.project-image {
-  width: 98%;
-  max-width: 300px;
-  border: 3px solid var(--light-color);
-  border-radius: 4px;
-  margin: 8px auto 8px;
-}
-
-.project-image.inline {
-  max-width: 100px;
-  height: 100px;
-  float: right;
-  margin-top: 18px;
-  margin-left: 8px;
-}
-
-.project-image.circle {
-  border-radius: 100%;
-}
-
-.active {
-  margin: 20px auto;
-  width: 60%;
-  max-width: 900px;
-  z-index: 3;
-  position: sticky;
-  user-select: text;
-}
-
-.modal {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  padding: 0;
-}
-
-.modal .overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-open {
-  overflow: hidden;
-}
-
-.icon-container {
-  display: flex;
-  align-items: center;
-}
-
-.active .close-button {
-  display: inline-block;
-}
-
-.close-button {
-  display: none;
-  position: relative;
-  background: var(--color-coral);
-  color: #fff;
-  padding: 4px;
-  border-radius: 4px;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.close-button:hover {
-  opacity: 0.8;
-}
-
-.close-button-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.placeholder {
-  width: var(--card-width);
-  height: var(--card-height);
-  background-color: var(--light-color);
-  border-radius: 4px;
-  margin: 6px;
-}
-
-.gg-close {
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  transform: scale(var(--ggs, 1));
-  width: 22px;
-  height: 22px;
-  border: 2px solid transparent;
-  border-radius: 40px;
-}
-
-.gg-close::after,
-.gg-close::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-  width: 16px;
-  height: 2px;
-  background: currentColor;
-  transform: rotate(45deg);
-  border-radius: 5px;
-  top: 8px;
-  left: 1px;
-}
-
-.gg-close::after {
-  transform: rotate(-45deg);
 }

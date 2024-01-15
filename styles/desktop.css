@@ -36,17 +36,13 @@
     }
   }
 
-  .card:hover:not(.active) .title-wrapper {
+  .card:hover .title-wrapper {
     background-color: var(--dark-color);
     color: var(--light-color);
   }
 
   a:hover {
     text-decoration: none;
-  }
-
-  .card.active .project-image {
-    margin-right: 8px;
   }
 
   .emoji-sprinkle-button:hover {

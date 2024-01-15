@@ -11,8 +11,6 @@
   --light-color: var(--color-sand);
   --dark-mode-cat: url(../assets/dark-mode/sand-cat.svg);
   --light-mode-cat: url(../assets/dark-mode/ocean-cat.svg);
-  --card-height: 280px;
-  --card-width: 280px;
 }
 
 body {

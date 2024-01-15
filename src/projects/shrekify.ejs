@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= htmlWebpackPlugin.options.baseHeadContent %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta
+      name="description"
+      content="A tool for Shrekification! Upload a pic of yourself and you'll get turned green."
+    />
+  </head>
+
+  <body class="project-page">
+    <%= htmlWebpackPlugin.options.preBodyContent %>
+
+    <a class="home-link" href="/">Home</a>
+
+    <div class="header">
+      <div class="emoji">
+        <iconify-icon icon="fluent-emoji:avocado"></iconify-icon>
+      </div>
+      <h1><%= htmlWebpackPlugin.options.title %></h1>
+    </div>
+
+    <div class="content">
+      <ul class="badge-list">
+        <li>2022</li>
+        <li>Svelte</li>
+        <li>TypeScript</li>
+        <li>AWS Lambda</li>
+        <li>Canvas</li>
+      </ul>
+
+      <p>
+        A tool for Shrekification! Upload a pic of yourself and you'll get
+        turned green.
+      </p>
+
+      <p>
+        <a href="https://shrekify.netlify.app/" target="_blank"
+          >Check it out!</a
+        >
+      </p>
+
+      <p>
+        First, you upload a picture. Then, when the "Shrekify" button is
+        pressed, the image is shrunk (if needed, to avoid long processing times)
+        and passed to an AWS lambda function, where it is read pixel by pixel to
+        determine which ones to turn green. Afterwards, a simple face detection
+        is done and Shrek ears are sized and placed using
+        <code>node-canvas</code>. The image gets returned to the browser where
+        it is displayed to be downloaded and/or shared.
+      </p>
+
+      <p>A Shrekified Jesse:</p>
+
+      <img
+        class="project-image lazy"
+        data-src="<%= require('../../assets/projects/shrekify/me-750w.png') %>"
+        alt="A Shrekified Jesse"
+        loading="lazy"
+        width="300"
+        height="400"
+      />
+
+      <p>
+        I did not write the code for detecting when pixels are "skin-colored" -
+        I just converted it to TypeScript from this
+        <a href="https://codepen.io/mathdotrandom/pen/ANgeBx" target="_blank"
+          >CodePen</a
+        >. Nor did I write the code for detecting faces, that was copied and
+        adapted for the newest version of Node.js Canvas from
+        <a href="https://www.npmjs.com/package/face-detect" target="_blank"
+          ><code>face-detect</code></a
+        >.
+      </p>
+
+      <p>
+        It took quite a few tries to get this "right" - and even then, it's
+        pretty bad. Here are some decisions that I made along the way:
+      </p>
+      <ul>
+        <li>
+          At one point, this was actually a full-blown SvelteKit app with the
+          Shrekification done on an API route, but hosting it was going to cost
+          a pretty penny because of the long processing times.
+        </li>
+        <li>
+          After moving it to a Svelte app built with Vite, I tried going the
+          simple route (or so I thought) of doing all the processing in the
+          browser. I knew it would freeze up the page, but I was going to let
+          the user know of this ahead of time. Unfortunately, Safari on iOS
+          auto-refreshes the page when it detects that it is frozen. Oh well.
+        </li>
+        <li>
+          Enter web workers. This seemed super promising, as I'd avoid freezing
+          the page! Woot! And it worked, but the overhead of using web workers
+          blew up the perceived Shrekification time, so back to the drawing
+          board.
+        </li>
+        <li>
+          At this point, it seemed pointless to continue trying solutions in the
+          browser, so I moved all the processing back to a Node.js
+          environment... where it was to begin with. It was just a question of
+          where to run this code. So, enter AWS Lambda functions. They give you
+          a crazy high amount of free compute time, so it seemed like I was
+          finally seeing the light! And I was. It took awhile to get everything
+          configured just right, but that's how it is set up now. Thanks for
+          reading!
+        </li>
+      </ul>
+
+      <p>
+        Source code in the
+        <a href="https://github.com/JesseKuntz/shrekify" target="_blank"
+          >Github repository</a
+        >.
+      </p>
+    </div>
+
+    <%= htmlWebpackPlugin.options.postBodyContent %>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= htmlWebpackPlugin.options.baseHeadContent %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta
+      name="description"
+      content="A system consisting of an app on a mobile device + a web app for mapping out the coordinates of a physical object and converting them to a Blender-compatible file for editing."
+    />
+  </head>
+
+  <body class="project-page">
+    <%= htmlWebpackPlugin.options.preBodyContent %>
+
+    <a class="home-link" href="/">Home</a>
+
+    <div class="header">
+      <div class="emoji">
+        <iconify-icon icon="fluent-emoji:chart-increasing"></iconify-icon>
+      </div>
+      <h1><%= htmlWebpackPlugin.options.title %></h1>
+    </div>
+
+    <div class="content">
+      <ul class="badge-list">
+        <li>2019</li>
+        <li>React Native</li>
+        <li>Express</li>
+        <li>Plotly</li>
+      </ul>
+
+      <p>
+        A system consisting of an app on a mobile device + a web app for mapping
+        out the coordinates of a physical object and converting them to a
+        Blender-compatible file for editing. This was my capstone project.
+      </p>
+
+      <p>Source code (and much more information) in the Github repositories:</p>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/JesseKuntz/model-creator-web"
+            target="_blank"
+            >Web Component</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/JesseKuntz/model-creator-app"
+            target="_blank"
+            >App Component</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <%= htmlWebpackPlugin.options.postBodyContent %>
+  </body>
+</html>

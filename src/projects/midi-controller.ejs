@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= htmlWebpackPlugin.options.baseHeadContent %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="A MIDI controller." />
+  </head>
+
+  <body class="project-page">
+    <%= htmlWebpackPlugin.options.preBodyContent %>
+
+    <a class="home-link" href="/">Home</a>
+
+    <div class="header">
+      <div class="emoji">
+        <iconify-icon icon="fluent-emoji:musical-note"></iconify-icon>
+      </div>
+      <h1><%= htmlWebpackPlugin.options.title %></h1>
+    </div>
+
+    <div class="content">
+      <ul class="badge-list">
+        <li>2017</li>
+        <li>Teensy</li>
+      </ul>
+
+      <p>
+        A MIDI controller that is modeled after the one built in
+        <a
+          href="https://ask.audio/articles/how-to-build-a-simple-diy-usb-midi-controller-using-teensy"
+          target="_blank"
+          >this article</a
+        >.
+      </p>
+
+      <p>Components:</p>
+      <ul>
+        <li>Teensy LC</li>
+        <li>Solderless Breadboard</li>
+        <li>Jumper Wires</li>
+        <li>Arcade Buttons</li>
+        <li>Toggle Switch</li>
+        <li>Micro USB Cable</li>
+        <li>Cardbord Enclosure</li>
+      </ul>
+
+      <img
+        class="project-image lazy"
+        data-src="<%= require('../../assets/projects/midi-400w.jpg') %>"
+        alt="Midi Controller"
+        loading="lazy"
+        width="300"
+        height="225"
+      />
+
+      <p>
+        Using Reaper and various VSTs, this MIDI controller has the ability to
+        create endless music. I mainly use it to make drum tracks, with
+        <a
+          href="https://www.kvraudio.com/product/sl-drums-3-by-electronik-sound-lab"
+          target="_blank"
+          >SL Drums 3</a
+        >
+        from Beatmaker. There is also a toggle switch that can be used to catch
+        incoming CC signals. The following code can be programmed into the
+        Teensy in order to make it recognizable as a MIDI controller.
+      </p>
+
+      <p>
+        <a
+          href="https://gist.github.com/JesseKuntz/9f59204ee5de2190f2e25cc63336fcd2#file-midi-h"
+          target="_blank"
+          >MIDI Code</a
+        >
+      </p>
+    </div>
+
+    <%= htmlWebpackPlugin.options.postBodyContent %>
+  </body>
+</html>

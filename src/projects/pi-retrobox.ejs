@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= htmlWebpackPlugin.options.baseHeadContent %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta
+      name="description"
+      content="This is my version of the 'Pi Retrobox' which is essentially an all-in-one retro gaming console and controller."
+    />
+  </head>
+
+  <body class="project-page">
+    <%= htmlWebpackPlugin.options.preBodyContent %>
+
+    <a class="home-link" href="/">Home</a>
+
+    <div class="header">
+      <div class="emoji">
+        <iconify-icon icon="fluent-emoji:joystick"></iconify-icon>
+      </div>
+      <h1><%= htmlWebpackPlugin.options.title %></h1>
+    </div>
+
+    <div class="content">
+      <ul class="badge-list">
+        <li>2017</li>
+        <li>Raspberry Pi</li>
+      </ul>
+
+      <p>
+        This is my version of the 'Pi Retrobox' which is essentially an
+        all-in-one retro gaming console and controller.
+      </p>
+
+      <img
+        class="project-image lazy"
+        data-src="<%= require('../../assets/projects/retrobox-400w.jpg') %>"
+        alt="Pi Retrobox"
+        loading="lazy"
+        width="300"
+        height="225"
+      />
+
+      <p>
+        HUGE shoutout to Zach on howchoo for putting together the
+        <a
+          href="https://howchoo.com/g/zjm4zwzjzgi/pi-retrobox-build-your-own-diy-raspberry-pi-arcade-joystick"
+          target="_blank"
+          >guide</a
+        >
+        that helped me build this! This was 100% their idea, and I don't take
+        credit for any of it. I'm just happy that I was able to build my own!
+        The build is pretty much the same as howchoo does it, save for the
+        printed image. If you want to learn anything else about it, click on
+        that guide!
+      </p>
+    </div>
+
+    <%= htmlWebpackPlugin.options.postBodyContent %>
+  </body>
+</html>

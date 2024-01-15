@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= htmlWebpackPlugin.options.baseHeadContent %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta
+      name="description"
+      content="A tracking system for your Animal Crossing New Horizons fish, bugs, and sea creatures."
+    />
+  </head>
+
+  <body class="project-page">
+    <%= htmlWebpackPlugin.options.preBodyContent %>
+
+    <a class="home-link" href="/">Home</a>
+
+    <div class="header">
+      <div class="emoji">
+        <iconify-icon icon="fluent-emoji:check-mark-button"></iconify-icon>
+      </div>
+      <h1><%= htmlWebpackPlugin.options.title %></h1>
+    </div>
+
+    <div class="content">
+      <ul class="badge-list">
+        <li>2020</li>
+        <li>Preact</li>
+        <li>Netlify Identity</li>
+        <li>FaunaDB</li>
+        <li>Jest</li>
+        <li>Enzyme</li>
+      </ul>
+
+      <p>
+        A tracking system for your Animal Crossing New Horizons fish, bugs, and
+        sea creatures. Once you log in and mark everything that you have caught
+        so far, you will get a monthly email notifying you of what you have left
+        to catch for that specific month.
+      </p>
+
+      <p>
+        <a href="https://ac-tracker.netlify.app/" target="_blank"
+          >Check it out!</a
+        >
+      </p>
+
+      <p>
+        I originally made it for myself, but anyone can use it - just create an
+        account and track your catches!
+      </p>
+
+      <p>
+        Source code in the
+        <a href="https://github.com/JesseKuntz/acnh-tracker" target="_blank"
+          >Github repository</a
+        >.
+      </p>
+    </div>
+
+    <%= htmlWebpackPlugin.options.postBodyContent %>
+  </body>
+</html>
