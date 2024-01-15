@@ -1,0 +1,1 @@
+!async function(){const n=(new Date).toISOString().slice(0,10),o=await fetch(`https://api.npmjs.org/downloads/point/2021-01-01:${n}/emoji-sprinkle`),{downloads:t}=await o.json();document.querySelector(".download-count").innerHTML=t}();
