@@ -57,15 +57,15 @@
 
   .project-page {
     padding: 30px 12px;
+  }
 
-    h1 {
-      font-size: 40px;
-      margin: 0 12px 0 0;
-    }
+  .project-page h1 {
+    font-size: 40px;
+    margin: 0 12px 0 0;
+  }
 
-    .emoji {
-      margin-right: 12px;
-      font-size: 40px;
-    }
+  .project-page .emoji {
+    margin: 12px 12px 12px 0;
+    font-size: 40px;
   }
 }
