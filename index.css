@@ -144,60 +144,60 @@ a svg {
   margin: 10px 0 0;
 }
 
+.badge-list > li {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 2px 6px;
+}
+
+.badge-list > li:first-child {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 2px 6px;
+}
+
 .project-page {
   padding: 24px 100px;
+}
 
-  .home-link {
-    font-size: 24px;
-  }
+.project-page .home-link {
+  font-size: 24px;
+}
 
-  .header {
-    margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+.project-page .header {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-  h1 {
-    margin: 0 20px 0 0;
-    text-align: left;
-  }
+.project-page h1 {
+  margin: 0 20px 0 0;
+  text-align: left;
+}
 
-  .emoji {
-    display: flex;
-    margin-right: 20px;
-  }
+.project-page .emoji {
+  display: flex;
+  margin: 20px 20px 20px 0;
+}
 
-  .content {
-    font-size: 18px;
-    line-height: 1.4;
-    margin-top: 40px;
-  }
+.project-page .content {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-top: 20px;
+}
 
-  .badge-list > li {
-    color: var(--dark-color);
-    background-color: var(--light-color);
-    border: 1px solid var(--light-color);
-    border-radius: 4px;
-    margin-right: 8px;
-    padding: 2px 6px;
-  }
-
-  .badge-list > li:first-child {
-    color: var(--light-color);
-    background-color: var(--dark-color);
-    border-radius: 4px;
-    margin-right: 8px;
-    padding: 2px 6px;
-  }
-
-  .project-image {
-    width: 98%;
-    max-width: 300px;
-    border: 3px solid var(--light-color);
-    border-radius: 4px;
-    margin: 8px 0 8px;
-  }
+.project-page .project-image {
+  width: 98%;
+  max-width: 300px;
+  border: 3px solid var(--light-color);
+  border-radius: 4px;
+  margin: 8px 0 8px;
 }
 
 .viewport-container {
@@ -353,16 +353,16 @@ h2 {
 
   .project-page {
     padding: 30px 12px;
+  }
 
-    h1 {
-      font-size: 40px;
-      margin: 0 12px 0 0;
-    }
+  .project-page h1 {
+    font-size: 40px;
+    margin: 0 12px 0 0;
+  }
 
-    .emoji {
-      margin-right: 12px;
-      font-size: 40px;
-    }
+  .project-page .emoji {
+    margin: 12px 12px 12px 0;
+    font-size: 40px;
   }
 }
 
