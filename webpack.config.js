@@ -18,11 +18,6 @@ const baseHeadContent = `
   <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="32x32" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="64x64" />
   <link rel="apple-touch-icon" href="apple-touch.png" />
-
-  <script
-    async
-    src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"
-  ></script>
 `;
 const preBodyContent = `
   <svg class="cat"></svg>

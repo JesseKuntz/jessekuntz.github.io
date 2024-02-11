@@ -12,7 +12,7 @@ class ProjectCard extends HTMLElement {
       <a class='card' href="${name}.html">
         <div class='title-wrapper'>
           <div class='emoji'>
-            <iconify-icon icon="fluent-emoji:${emoji}"></iconify-icon>
+            <span class="fluent-emoji--${emoji}"></span>
           </div>
           <h3 class='card-title'>
             <div>${title}</div>
