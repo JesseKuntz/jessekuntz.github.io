@@ -11,17 +11,19 @@ class ProjectCard extends HTMLElement {
     this.innerHTML = `
       <a class='card' href="${name}.html">
         <div class='title-wrapper'>
-          <div class='emoji'>
-            <span class="fluent-emoji--${emoji}"></span>
-          </div>
+          <img
+            class="emoji"
+            src="${emoji}.svg"
+            width="70"
+            height="70"
+            loading="lazy"
+          />
           <h3 class='card-title'>
             <div>${title}</div>
           </h3>
         </div>
       </a>
     `;
-
-    // this.className = "no-after";
   }
 }
 

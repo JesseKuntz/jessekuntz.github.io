@@ -16,9 +16,12 @@
     <a class="home-link" href="/">Home</a>
 
     <div class="header">
-      <div class="emoji">
-        <span class="fluent-emoji--avocado"></span>
-      </div>
+      <img
+        class="emoji"
+        src="<%= require('../../assets/projects/emoji/avocado.svg') %>"
+        width="70"
+        height="70"
+      />
       <h1><%= htmlWebpackPlugin.options.title %></h1>
     </div>
 
@@ -55,8 +58,8 @@
       <p>A Shrekified Jesse:</p>
 
       <img
-        class="project-image lazy"
-        data-src="<%= require('../../assets/projects/shrekify/me-750w.png') %>"
+        class="project-image"
+        src="<%= require('../../assets/projects/shrekify/me-750w.png') %>"
         alt="A Shrekified Jesse"
         loading="lazy"
         width="300"

@@ -39,8 +39,8 @@ project-card {
   color: var(--dark-color);
 }
 
-.emoji {
-  font-size: 70px;
+.card .emoji {
+  margin-bottom: 12px;
 }
 
 .card-title {

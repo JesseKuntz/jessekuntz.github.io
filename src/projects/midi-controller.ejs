@@ -13,9 +13,12 @@
     <a class="home-link" href="/">Home</a>
 
     <div class="header">
-      <div class="emoji">
-        <span class="fluent-emoji--musical-note"></span>
-      </div>
+      <img
+        class="emoji"
+        src="<%= require('../../assets/projects/emoji/musical-note.svg') %>"
+        width="70"
+        height="70"
+      />
       <h1><%= htmlWebpackPlugin.options.title %></h1>
     </div>
 
@@ -46,8 +49,8 @@
       </ul>
 
       <img
-        class="project-image lazy"
-        data-src="<%= require('../../assets/projects/midi-400w.jpg') %>"
+        class="project-image"
+        src="<%= require('../../assets/projects/midi-400w.jpg') %>"
         alt="Midi Controller"
         loading="lazy"
         width="300"

@@ -24,8 +24,6 @@ function meow() {
   audio.play();
 }
 
-new window.LazyLoad();
-
 cat.addEventListener("click", () => {
   meow();
 
