@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= htmlWebpackPlugin.options.baseHeadContent %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta
+      name="description"
+      content='An app that that allows you to send "Kirbytine"s to the important people in your life!'
+    />
+  </head>
+
+  <body class="project-page">
+    <%= htmlWebpackPlugin.options.preBodyContent %>
+
+    <a class="home-link" href="/">Home</a>
+
+    <div class="header">
+      <img
+        class="emoji"
+        src="<%= require('../../assets/projects/emoji/sparkling-heart.svg') %>"
+        width="70"
+        height="70"
+        alt="Sparkling heart emoji"
+      />
+      <h1><%= htmlWebpackPlugin.options.title %></h1>
+    </div>
+
+    <div class="content">
+      <ul class="badge-list">
+        <li>2024</li>
+        <li>Remix</li>
+        <li>TypeScript</li>
+        <li>Supabase</li>
+        <li>Tailwind CSS</li>
+      </ul>
+
+      <p>
+        An app that that allows you to send "Kirbytine"s to the important people
+        in your life!
+      </p>
+
+      <p>
+        <a href="https://kirbytine.vercel.app/" target="_blank"
+          >Check it out!</a
+        >
+      </p>
+
+      <p>
+        You can type your message and then generate a link which you can share
+        with your intended recipient. Here's an example:
+        <a
+          href="https://kirbytine.vercel.app/50a75016-0752-4394-8274-9f6d577057db"
+          target="_blank"
+          >Kirbytine message</a
+        >.
+      </p>
+
+      <p>
+        Source code in the
+        <a href="https://github.com/JesseKuntz/kirbytine" target="_blank"
+          >Github repository</a
+        >.
+      </p>
+    </div>
+
+    <%= htmlWebpackPlugin.options.postBodyContent %>
+  </body>
+</html>
