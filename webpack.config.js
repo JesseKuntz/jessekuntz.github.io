@@ -5,6 +5,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const baseHeadContent = `
   <meta charset="UTF-8" />
@@ -100,6 +101,12 @@ module.exports = {
       chunks: ["index"],
     }),
     new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: "sitemap.xml", to: "." },
+        { from: "robots.txt", to: "." },
+      ],
+    }),
   ],
   output: {
     filename: "[name].bundle.js",

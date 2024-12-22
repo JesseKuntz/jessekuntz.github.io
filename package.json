@@ -22,6 +22,7 @@
   "homepage": "https://github.com/JesseKuntz/jessekuntz.github.io#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^5.0.1",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
