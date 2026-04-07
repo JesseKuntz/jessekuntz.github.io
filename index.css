@@ -79,6 +79,11 @@ project-card {
   margin-bottom: 12px;
 }
 
+.card .emoji svg {
+  width: 70px;
+  height: 70px;
+}
+
 .card-title {
   font-size: 28px;
   font-weight: bold;
@@ -184,6 +189,11 @@ a svg {
 .project-page .emoji {
   display: flex;
   margin: 20px 20px 20px 0;
+}
+
+.project-page .emoji svg {
+  width: 70px;
+  height: 70px;
 }
 
 .project-page .content {
@@ -362,6 +372,9 @@ h2 {
 
   .project-page .emoji {
     margin: 12px 12px 12px 0;
+  }
+
+  .project-page .emoji svg {
     width: 40px;
     height: 40px;
   }
