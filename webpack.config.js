@@ -84,7 +84,13 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
+        test: /\.svg$/i,
+        include: path.resolve(__dirname, "assets/projects/emoji"),
+        type: "asset/source",
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif|mp3)$/i,
+        exclude: path.resolve(__dirname, "assets/projects/emoji"),
         type: "asset/resource",
         generator: {
           filename: "[name][ext]",

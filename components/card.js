@@ -1,5 +1,7 @@
 "use strict";
 
+const emojis = require("./emojis");
+
 class ProjectCard extends HTMLElement {
   constructor() {
     super();
@@ -11,13 +13,7 @@ class ProjectCard extends HTMLElement {
     this.innerHTML = `
       <a class='card' href="${name}.html">
         <div class='title-wrapper'>
-          <img
-            class="emoji"
-            src="${emoji}.svg"
-            width="70"
-            height="70"
-            loading="lazy"
-          />
+          <div class="emoji">${emojis[emoji] || ""}</div>
           <h3 class='card-title'>
             <div>${title}</div>
           </h3>

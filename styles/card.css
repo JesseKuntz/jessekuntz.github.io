@@ -43,6 +43,11 @@ project-card {
   margin-bottom: 12px;
 }
 
+.card .emoji svg {
+  width: 70px;
+  height: 70px;
+}
+
 .card-title {
   font-size: 28px;
   font-weight: bold;

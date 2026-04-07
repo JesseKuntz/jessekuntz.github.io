@@ -83,6 +83,11 @@
   margin: 20px 20px 20px 0;
 }
 
+.project-page .emoji svg {
+  width: 70px;
+  height: 70px;
+}
+
 .project-page .content {
   font-size: 18px;
   line-height: 1.4;

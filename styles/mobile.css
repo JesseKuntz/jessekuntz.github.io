@@ -66,6 +66,9 @@
 
   .project-page .emoji {
     margin: 12px 12px 12px 0;
+  }
+
+  .project-page .emoji svg {
     width: 40px;
     height: 40px;
   }
