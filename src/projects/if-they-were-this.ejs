@@ -16,17 +16,19 @@
     <a class="home-link" href="/">Home</a>
 
     <div class="header">
-      <div class="emoji"><%= require('../../assets/projects/emoji/shooting-star.svg') %></div>
+      <div class="emoji">
+        <%= require('../../assets/projects/emoji/shooting-star.svg') %>
+      </div>
       <h1><%= htmlWebpackPlugin.options.title %></h1>
     </div>
 
     <div class="content">
       <ul class="badge-list">
         <li>2021</li>
-        <li>Gatsby</li>
-        <li>GraphQL</li>
-        <li>Apollo</li>
-        <li>FaunaDB</li>
+        <li>Gatsby -> Next.js</li>
+        <li>FaunaDB -> MongoDB</li>
+        <li>GraphQL (CMS)</li>
+        <li>Apollo (CMS)</li>
       </ul>
 
       <p>
@@ -35,15 +37,15 @@
         fun!
       </p>
 
-      <p style="text-decoration: line-through">Check it out!</p>
-      <p style="font-style: italic">
-        👆 The hosted site is curently under construction due to the deprectaion
-        of Gatsby Cloud and the Fauna GraphQL API.
+      <p>
+        <a href="https://iftheywerethis.netlify.app/" target="_blank"
+          >Check it out!</a
+        >
       </p>
 
       <p>
-        As a part of this project, I also created a simple CMS - my partner
-        created and sourced all of the content.
+        As a part of this project, I also created a simple CMS so that non-devs
+        could add and edit quizzes.
       </p>
 
       <p>
