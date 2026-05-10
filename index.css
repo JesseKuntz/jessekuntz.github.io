@@ -210,6 +210,10 @@ a svg {
   margin: 8px 0 8px;
 }
 
+.project-page .ac-tracker-email-image {
+  max-width: 600px;
+}
+
 .viewport-container {
   padding: 60px 0;
 }
