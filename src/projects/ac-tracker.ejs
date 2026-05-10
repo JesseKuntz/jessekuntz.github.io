@@ -16,7 +16,9 @@
     <a class="home-link" href="/">Home</a>
 
     <div class="header">
-      <div class="emoji"><%= require('../../assets/projects/emoji/check-mark-button.svg') %></div>
+      <div class="emoji">
+        <%= require('../../assets/projects/emoji/check-mark-button.svg') %>
+      </div>
       <h1><%= htmlWebpackPlugin.options.title %></h1>
     </div>
 
@@ -25,7 +27,7 @@
         <li>2020</li>
         <li>Preact</li>
         <li>Netlify Identity</li>
-        <li>FaunaDB</li>
+        <li>FaunaDB -> MongoDB</li>
         <li>Jest</li>
         <li>Enzyme</li>
       </ul>
@@ -44,9 +46,28 @@
       </p>
 
       <p>
+        <a
+          href="https://youtube.com/shorts/UV1GZ2muxO0?feature=share"
+          target="_blank"
+          >Mobile Demo</a
+        >
+        |
+        <a href="https://youtu.be/tFFHYAngr5k" target="_blank">Desktop Demo</a>
+      </p>
+
+      <p>
         I originally made it for myself, but anyone can use it - just create an
         account and track your catches!
       </p>
+
+      <p>Sample email:</p>
+
+      <img
+        class="project-image ac-tracker-email-image"
+        src="<%= require('../../assets/projects/ac-tracker-email.jpg') %>"
+        alt="AC Tracker Email Screenshot"
+        loading="lazy"
+      />
 
       <p>
         Source code in the
