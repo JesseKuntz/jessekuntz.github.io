@@ -79,9 +79,10 @@ project-card {
   margin-bottom: 12px;
 }
 
-.card .emoji svg {
+.card .emoji img {
   width: 70px;
   height: 70px;
+  display: block;
 }
 
 .card-title {
@@ -191,9 +192,10 @@ a svg {
   margin: 20px 20px 20px 0;
 }
 
-.project-page .emoji svg {
+.project-page .emoji img {
   width: 70px;
   height: 70px;
+  display: block;
 }
 
 .project-page .content {
@@ -378,7 +380,7 @@ h2 {
     margin: 12px 12px 12px 0;
   }
 
-  .project-page .emoji svg {
+  .project-page .emoji img {
     width: 40px;
     height: 40px;
   }
