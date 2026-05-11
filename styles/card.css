@@ -43,9 +43,10 @@ project-card {
   margin-bottom: 12px;
 }
 
-.card .emoji svg {
+.card .emoji img {
   width: 70px;
   height: 70px;
+  display: block;
 }
 
 .card-title {

@@ -13,7 +13,7 @@ class ProjectCard extends HTMLElement {
     this.innerHTML = `
       <a class='card' href="${name}.html">
         <div class='title-wrapper'>
-          <div class="emoji">${emojis[emoji] || ""}</div>
+          <div class="emoji"><img src="${emojis[emoji] || ""}" alt="" /></div>
           <h3 class='card-title'>
             <div>${title}</div>
           </h3>
